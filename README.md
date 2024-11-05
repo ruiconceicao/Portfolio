@@ -2,4 +2,4 @@
 
 ### Assets
 
-Design by: Filipe Covas
+Designed by: Filipe Covas
