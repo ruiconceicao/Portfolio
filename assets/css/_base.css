@@ -1,0 +1,167 @@
+@import url("_variables.css");
+
+/*|-------------------------|
+  |                         |
+  |          _BASE          |
+  |   -Base commun styles   |
+  |                         |
+  |-------------------------|*/
+
+html {
+    font-size: 62.5%;
+    line-height: 2.6rem;
+    font-family: "Poppins", "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: #fff;
+}
+
+div.container {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/******************************************************/
+
+/*|----------------|
+  |   TIPOGRAFIA   |
+  |----------------|*/
+
+h1 {
+    color: var(--colorH1);
+    line-height: 7rem;
+    font-weight: var(--fontWeightBold);
+    font-size: 5.8rem;
+}
+
+h2 {
+    font-weight: var(--fontWeightBold);
+    color: var(--colorH2);
+    font-size: 4.8rem;
+}
+
+h3 {
+    color: var(--colorH3);
+    font-weight: var(--fontWeightRegular);
+    font-size: 3.2rem;
+}
+
+h4 {
+    color: var(--colorH4);
+    font-weight: var(--fontWeightMedium);
+    font-size: 2.8rem;
+}
+
+p {
+    font-weight: var(--fontWeightLight);
+    font-size: 1.8rem;
+    color: var(--colorText);
+}
+
+hr {
+    width: 100%;
+    background: var(--gradient);
+    border: none;
+    height: 2px;
+    border-radius: 100%;
+}
+
+a svg path {
+    fill: var(--colorIcon);
+}
+
+.primaryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*  |----------|
+    |   MENU   |
+    |----------|*/
+.primaryHeader .columnLeft {
+    width: 80%;
+}
+
+.primaryHeader .columnLeft .menuLarge ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5%;
+    list-style-type: none;
+    padding-left: 5%;
+}
+
+.primaryHeader .columnLeft .menuLarge ul li a {
+    display: flex;
+    font-size: 2rem;
+    color: var(--colorPrimaryMenu);
+    text-decoration: none;
+}
+
+/*  |-----------------|
+    |   FIM DO MENU   |
+    |-----------------|*/
+
+/*  |--------------------------|
+    |   LOGO+DARK/LIGHT MODE   |
+    |--------------------------|*/
+.primaryHeader .columnRight {
+
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10%;
+    padding-right: 5%;
+    z-index: 0;
+}
+
+/*      |----------|
+        |   LOGO   |
+        |----------|*/
+.primaryHeader .columnRight .logo {
+    user-select: none;
+    pointer-events: none
+}
+
+.primaryHeader .columnRight .logo .rui {
+    font-size: 4rem;
+    line-height: 2.6rem;
+    transform: rotateY(180deg);
+    margin-bottom: 0px;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: var(--fontWeightMedium);
+}
+
+.primaryHeader .columnRight .logo .dev {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    font-weight: var(--fontWeightSemiBold);
+    text-align: center;
+    margin-top: 0;
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*      |----------------|
+        |   LIGHT MODE   |
+        |----------------|*/
+.primaryHeader button.toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.primaryHeader button.toggle svg {
+    stroke: var(--colorText);
+    fill: var(--colorText);
+}
+
+/*  |---------------------------------|
+    |   FIM DA LOGO+DARK/LIGHT MODE   |
+    |---------------------------------|*/

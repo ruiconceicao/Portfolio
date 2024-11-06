@@ -1,59 +1,54 @@
+@import url("_variables.css");
+@import url("_base.css");
+
 /*|----------------------------------|
   |                                  |
-  |               MAIN               |
+  |        MAIN - Mobile first       |
   |   -Main CSS file for portfolio   |
   |                                  |
   |----------------------------------|*/
-@import url("_variables.css");
-
-html {
-    font-size: 62.5%;
-    font-family: "Poppins", sans-serif;
-}
-
-body {
-    background-color: var(--background);
-    color: #fff;
-}
-
-div.container {
-    width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
-}
 
 /******************************************************/
 
-/*|----------------|
-  |   TIPOGRAFIA   |
-  |----------------|*/
-
-h1 {
-    color: var(--colorH1);
-    font-weight: var(--fontWeightBold);
-    font-size: 5.8rem;
+/*|--------------------|
+  |   MOBILE < 800px   |
+  |--------------------|*/
+@media (max-width: 799px) {
+  .primaryHeader .columnLeft .menuLarge {
+    display: none;
+  }
 }
 
-h2 {
-    font-weight: var(--fontWeightBold);
-    color: var(--colorH2);
-    font-size: 4.8rem;
+/*|-------------------|
+  |   FIM DE MOBILE   |
+  |-------------------|*/
+
+/******************************************************/
+
+/*|--------------------|
+  |   TABLET < 950px   |
+  |--------------------|*/
+@media (min-width: 800px) and (max-width: 949px) {
+  .primaryHeader .columnLeft .menuLarge {
+    display: none;
+  }
 }
 
-h3 {
-    color: var(--colorH3);
-    font-weight: var(--fontWeightRegular);
-    font-size: 3.2rem;
+/*|-------------------|
+  |   FIM DE TABLET   |
+  |-------------------|*/
+
+/******************************************************/
+
+/*|----------------------|
+  |   DESKTOP > 950px   |
+  |----------------------|*/
+@media (min-width: 950px) {
+  .primaryHeader .columnLeft .menuSmall {
+    display: none;
+  }
 }
 
-h4 {
-    color: var(--colorH4);
-    font-weight: var(--fontWeightMedium);
-    font-size: 2.8rem;
-}
-
-p {
-    font-weight: var(--fontWeightLight);
-    font-size: 1.8rem;
-    color: var(--colorText);
-}
+/*|--------------------|
+  |   FIM DO DESKTOP   |
+  |--------------------|*/
