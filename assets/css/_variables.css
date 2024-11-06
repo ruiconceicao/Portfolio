@@ -1,0 +1,48 @@
+/*|---------------------|
+  |                     |
+  |      VARIABLES      |
+  |   -Variables file   |
+  |                     |
+  |---------------------|*/
+
+:root {
+    --grey01: #191919;
+    --grey02: #363636;
+    --grey03: #666666;
+    --grey04: #A7A7A7;
+    --grey05: #CCCCCC;
+    --green01: #018C0F;
+    --green02: #D7FFE0;
+    --blue01: #42446E;
+    --white: #ffffff;
+    --gradient: linear-gradient(90deg, #cfba64 0%, #36301a 90%);
+    --fontWeightLight: 300;
+    --fontWeightRegular: 400;
+    --fontWeightMedium: 500;
+    --fontWeightSemiBold: 600;
+    --fontWeightBold: 700;
+}
+
+html[data-theme="light"] {
+    --background: var(--white);
+    --colorH1: var(--blue01);
+    --colorH2: var(--blue01);
+    --colorH3: var(--grey03);
+    --colorH4: var(--blue01);
+    --colorP: var(--grey03);
+    --colorPrimaryMenu: var(--grey03);
+    --colorIcon: var(--grey03);
+    --colorText: var(--blue01);
+}
+
+html[data-theme="dark"] {
+    --background: var(--grey01);
+    --colorH1: var(--grey05);
+    --colorH2: var(--grey05);
+    --colorH3: var(--grey04);
+    --colorH4: var(--grey05);
+    --colorP: var(--grey05);
+    --colorPrimaryMenu: var(--grey04);
+    --colorIcon: var(--grey04);
+    --colorText: var(--white);
+}
