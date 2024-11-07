@@ -26,6 +26,7 @@
 }
 
 html[data-theme="light"] {
+    --reversedBackground: var(--grey01);
     --background: var(--white);
     --colorH1: var(--blue01);
     --colorH2: var(--blue01);
@@ -40,6 +41,7 @@ html[data-theme="light"] {
 
 html[data-theme="dark"] {
     --background: var(--grey01);
+    --reversedBackground: var(--white);
     --colorH1: var(--grey05);
     --colorH2: var(--grey05);
     --colorH3: var(--grey04);

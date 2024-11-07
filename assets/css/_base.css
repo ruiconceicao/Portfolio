@@ -6,6 +6,9 @@
   |   -Base commun styles   |
   |                         |
   |-------------------------|*/
+* {
+    box-sizing: border-box;
+}
 
 html {
     font-size: 62.5%;
@@ -16,13 +19,31 @@ html {
 body {
     background-color: var(--background);
     color: #fff;
+    margin: 5px 0;
 }
 
-div.container {
+div.container,
+div.menuDrop {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
 }
+
+div.menuDrop {
+    z-index: 2;
+    background-color: var(--background);
+    box-shadow: 0px 2px 5px 0px var(--gradientMid);
+    display: none;
+    position: fixed;
+}
+
+
+
+/******************************************************/
+/* TEMPORARY STYLES */
+main {}
+
+main h1 span {}
 
 /******************************************************/
 
@@ -67,6 +88,8 @@ hr {
     border: none;
     height: 2px;
     border-radius: 100%;
+    margin: 0;
+    z-index: 2;
 }
 
 a svg path {
@@ -74,9 +97,13 @@ a svg path {
 }
 
 .primaryHeader {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
+    background-color: var(--background);
 }
 
 /*  |----------|
@@ -84,21 +111,33 @@ a svg path {
     |----------|*/
 .primaryHeader .columnLeft {
     width: 80%;
-}
-
-.primaryHeader .columnLeft .menuLarge ul {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 5%;
-    list-style-type: none;
     padding-left: 5%;
 }
 
-.primaryHeader .columnLeft .menuLarge ul li a {
+nav.menu ul {
+    gap: 5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav.menu.Small ul {
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 3% 3%;
+    gap: 5%;
+    row-gap: 10px;
+    margin: 0;
+}
+
+
+nav.menu ul li a {
     display: flex;
     font-size: 2rem;
-    color: var(--colorPrimaryMenu);
+    color: var(--colorH2);
     text-decoration: none;
 }
 
@@ -110,14 +149,12 @@ a svg path {
     |   LOGO+DARK/LIGHT MODE   |
     |--------------------------|*/
 .primaryHeader .columnRight {
-
     width: 20%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 10%;
     padding-right: 5%;
-    z-index: 0;
 }
 
 /*      |----------|
@@ -132,8 +169,8 @@ a svg path {
     font-size: 4rem;
     line-height: 2.6rem;
     transform: rotateY(180deg);
-    margin-bottom: 0px;
     font-family: "Press Start 2P", system-ui;
+    margin-bottom: 0px;
     font-weight: var(--fontWeightMedium);
 }
 
@@ -155,6 +192,8 @@ a svg path {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    display: flex;
+    padding: 0;
 }
 
 .primaryHeader button.toggle svg {

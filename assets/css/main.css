@@ -1,5 +1,6 @@
 @import url("_variables.css");
 @import url("_base.css");
+@import url("_animations.css");
 
 /*|----------------------------------|
   |                                  |
@@ -14,7 +15,7 @@
   |   MOBILE < 800px   |
   |--------------------|*/
 @media (max-width: 799px) {
-  .primaryHeader .columnLeft .menuLarge {
+  .primaryHeader .columnLeft .menu.Large {
     display: none;
   }
 }
@@ -25,11 +26,11 @@
 
 /******************************************************/
 
-/*|--------------------|
-  |   TABLET < 950px   |
-  |--------------------|*/
-@media (min-width: 800px) and (max-width: 949px) {
-  .primaryHeader .columnLeft .menuLarge {
+/*|---------------------|
+  |   TABLET < 1024px   |
+  |---------------------|*/
+@media (min-width: 800px) and (max-width: 1023px) {
+  .primaryHeader .columnLeft .menu.Large {
     display: none;
   }
 }
@@ -41,12 +42,24 @@
 /******************************************************/
 
 /*|----------------------|
-  |   DESKTOP > 950px   |
+  |   DESKTOP > 1024px   |
   |----------------------|*/
-@media (min-width: 950px) {
-  .primaryHeader .columnLeft .menuSmall {
+@media (min-width: 1024px) {
+
+  .primaryHeader .columnLeft .toggle,
+  div.menuDrop,
+  .menu.Small {
     display: none;
   }
+
+  /*  |----------|
+      |   MENU   |
+      |----------|*/
+
+
+  /*  |-----------------|
+      |   FIM DO MENU   |
+      |-----------------|*/
 }
 
 /*|--------------------|
