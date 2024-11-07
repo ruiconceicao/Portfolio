@@ -19,11 +19,12 @@
     }
 
     99% {
-        opacity: 0;
-        transform: translateY(-100px);
+        transform: translateY(-100%);
     }
 
     100% {
+        visibility: hidden;
+        opacity: 0;
         display: none;
     }
 }
