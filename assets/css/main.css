@@ -14,7 +14,7 @@
 /*|--------------------|
   |   MOBILE < 800px   |
   |--------------------|*/
-@media (max-width: 799px) {
+@media (max-width: 767px) {
   .primaryHeader .columnLeft .menu.Large {
     display: none;
   }
@@ -29,9 +29,13 @@
 /*|---------------------|
   |   TABLET < 1024px   |
   |---------------------|*/
-@media (min-width: 800px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .primaryHeader .columnLeft .menu.Large {
     display: none;
+  }
+
+  nav.menu.Small ul {
+    gap: 5%;
   }
 }
 
