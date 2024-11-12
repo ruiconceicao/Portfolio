@@ -12,7 +12,6 @@
 
 html {
     font-size: 62.5%;
-    line-height: 2.6rem;
     font-family: "Poppins", "Roboto", sans-serif;
 }
 
@@ -50,30 +49,40 @@ h1 {
     line-height: 7rem;
     font-weight: var(--fontWeightBold);
     font-size: 5.8rem;
+    font-size: clamp(3.6rem, 11.25vw, 5.8rem);
+    font-size: clamp(3rem, 9.37vw, 5.8rem);
 }
 
 h2 {
     font-weight: var(--fontWeightBold);
     color: var(--colorH2);
     font-size: 4.8rem;
+    font-size: clamp(3rem, 9.37vw, 4.8rem);
+    font-size: clamp(2.5rem, 7.81vw, 4.8rem);
 }
 
 h3 {
     color: var(--colorH3);
     font-weight: var(--fontWeightRegular);
     font-size: 3.2rem;
+    font-size: clamp(2rem, 6.25vw, 3.2rem);
+    font-size: clamp(2rem, 6.25vw, 3.2rem);
 }
 
 h4 {
     color: var(--colorH4);
     font-weight: var(--fontWeightMedium);
     font-size: 2.8rem;
+    font-size: clamp(1.7rem, 5.47vw, 2.8rem);
+    font-size: clamp(1.5rem, 4.68vw, 2.8rem);
 }
 
 p {
+    color: var(--colorText);
     font-weight: var(--fontWeightLight);
     font-size: 1.8rem;
-    color: var(--colorText);
+    font-size: clamp(1.2rem, 3.75vw, 1.8rem);
+    font-size: clamp(1rem, 3.12vw, 1.8rem);
 }
 
 hr {
