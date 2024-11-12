@@ -82,7 +82,6 @@ p {
     font-weight: var(--fontWeightLight);
     font-size: 1.8rem;
     font-size: clamp(1.2rem, 3.75vw, 1.8rem);
-    font-size: clamp(1rem, 3.12vw, 1.8rem);
 }
 
 hr {
