@@ -46,11 +46,10 @@ span {
 
 h1 {
     color: var(--colorH1);
-    line-height: 7rem;
     font-weight: var(--fontWeightBold);
     font-size: 5.8rem;
     font-size: clamp(3.6rem, 11.25vw, 5.8rem);
-    font-size: clamp(3rem, 9.37vw, 5.8rem);
+    font-size: clamp(2.5rem, 7.81vw, 5.8rem);
 }
 
 h2 {
@@ -58,7 +57,7 @@ h2 {
     color: var(--colorH2);
     font-size: 4.8rem;
     font-size: clamp(3rem, 9.37vw, 4.8rem);
-    font-size: clamp(2.5rem, 7.81vw, 4.8rem);
+    font-size: clamp(2.1rem, 6.56vw, 4.8rem);
 }
 
 h3 {
@@ -66,7 +65,7 @@ h3 {
     font-weight: var(--fontWeightRegular);
     font-size: 3.2rem;
     font-size: clamp(2rem, 6.25vw, 3.2rem);
-    font-size: clamp(2rem, 6.25vw, 3.2rem);
+    font-size: clamp(1.8rem, 5.62vw, 3.2rem);
 }
 
 h4 {
