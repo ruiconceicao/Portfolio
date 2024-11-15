@@ -15,14 +15,20 @@
     --green02: #D7FFE0;
     --blue01: #42446E;
     --white: #eeeeee;
-    --gradientEdges: #0D0B01;
-    --gradientMid: #bb9911;
+    --gradientMid: #cfba64;
     --fontWeightLight: 300;
     --fontWeightRegular: 400;
     --fontWeightMedium: 500;
     --fontWeightSemiBold: 600;
     --fontWeightBold: 700;
-    --gradient: linear-gradient(90deg, var(--background) 0%, var(--gradientMid) 50%, var(--background) 100%)
+    --gradient: linear-gradient(180deg,
+            var(--background) 0%,
+            var(--gradientMid) 30%,
+            var(--gradientMid) 70%,
+            var(--background) 100%);
+    --gradientSimple: linear-gradient(0deg,
+            var(--gradientMid) 0%,
+            var(--background) 100%);
 }
 
 html[data-theme="light"] {
@@ -36,7 +42,6 @@ html[data-theme="light"] {
     --colorPrimaryMenu: var(--grey03);
     --colorIcon: var(--grey03);
     --colorText: var(--blue01);
-
 }
 
 html[data-theme="dark"] {

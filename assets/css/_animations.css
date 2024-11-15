@@ -14,15 +14,11 @@
 
 @keyframes dropUp {
     0% {
-        opacity: 1;
         transform: translateY(0);
     }
 
-    99% {
-        transform: translateY(-100%);
-    }
-
     100% {
+        transform: translateY(-100%);
         visibility: hidden;
         opacity: 0;
         display: none;
