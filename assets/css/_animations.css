@@ -1,26 +1,32 @@
 @import url("_variables.css");
+/*|-----------------------|
+  |                       |
+  |      _ANIMATIONS      |
+  |   -Animations file-   |
+  |                       |
+  |-----------------------|*/
 
 @keyframes dropDown {
     0% {
-        opacity: 0;
         transform: translateY(-100%);
     }
 
     100% {
-        opacity: 1;
+        visibility: visible;
         transform: translateY(0);
+        /* box-shadow: 0px 0px 10px 5px var(--gradientMid); */
     }
 }
 
 @keyframes dropUp {
     0% {
+        visibility: visible;
         transform: translateY(0);
     }
 
     100% {
         transform: translateY(-100%);
         visibility: hidden;
-        opacity: 0;
         display: none;
     }
 }
@@ -30,5 +36,18 @@ div.menuDrop[data-visible="true"] {
 }
 
 div.menuDrop[data-visible="false"] {
-    animation: dropUp 0.2s ease forwards;
+    animation: dropUp 0.25s ease forwards;
+}
+
+nav.menu ul li a:focus,
+nav.menu ul li a:hover,
+nav.menu ul li a:focus svg path,
+nav.menu ul li a:hover svg path {
+    color: var(--gradientMid) !important;
+    fill: var(--gradientMid) !important;
+}
+
+.primaryHeader button.toggle:hover svg,
+.primaryHeader button.toggle:focus svg {
+    fill: var(--colorText) !important;
 }

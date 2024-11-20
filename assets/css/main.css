@@ -12,7 +12,7 @@
 /******************************************************/
 
 /*|--------------------|
-  |   MOBILE < 800px   |
+  |   MOBILE < 768px   |
   |--------------------|*/
 @media (max-width: 767px) {
   .primaryHeader .columnLeft .menu.Large {
@@ -32,8 +32,10 @@
 @media (min-width: 768px) and (max-width: 1023px) {
 
   .primaryHeader .columnLeft .toggle,
-  div.menuDrop,
-  .menu.Small {
+  .menuDrop,
+  .menu.Small,
+  #hrHeader {
+    visibility: hidden !important;
     display: none;
   }
 }
@@ -50,19 +52,12 @@
 @media (min-width: 1024px) {
 
   .primaryHeader .columnLeft .toggle,
-  div.menuDrop,
-  .menu.Small {
+  .menuDrop,
+  .menu.Small,
+  #hrHeader {
+    visibility: hidden !important;
     display: none;
   }
-
-  /*  |----------|
-      |   MENU   |
-      |----------|*/
-
-
-  /*  |-----------------|
-      |   FIM DO MENU   |
-      |-----------------|*/
 }
 
 /*|--------------------|

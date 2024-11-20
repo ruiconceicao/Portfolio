@@ -21,14 +21,20 @@
     --fontWeightMedium: 500;
     --fontWeightSemiBold: 600;
     --fontWeightBold: 700;
-    --gradient: linear-gradient(180deg,
+    --gradient: linear-gradient(90deg,
             var(--background) 0%,
             var(--gradientMid) 30%,
             var(--gradientMid) 70%,
             var(--background) 100%);
     --gradientSimple: linear-gradient(0deg,
-            var(--gradientMid) 0%,
-            var(--background) 100%);
+            var(--gradientMid) 30%,
+            var(--colorH2) 70%);
+    /* 7.5vw = minimum_font-size / 320px */
+    --fontSizeH1: clamp(2.4rem, 7.5vw, 5.8rem);
+    --fontSizeH2: clamp(2.1rem, 6.56vw, 4.8rem);
+    --fontSizeH3: clamp(1.8rem, 5.62vw, 3.2rem);
+    --fontSizeH4: clamp(1.5rem, 4.68vw, 2.8rem);
+    --fontSizeP: clamp(1.2rem, 3.75vw, 1.8rem);
 }
 
 html[data-theme="light"] {
