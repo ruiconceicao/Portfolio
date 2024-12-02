@@ -1,0 +1,57 @@
+/*|-----------------------|
+  |                       |
+  |      _TYPOGRAPHY      |
+  |   -Typography file-   |
+  |                       |
+  |-----------------------|*/
+
+h1 {
+    color: var(--colorH1);
+    font-weight: var(--fontWeightBold);
+    line-height: var(--fontSizeH1);
+    font-size: var(--fontSizeH1);
+}
+
+h2 {
+    font-weight: var(--fontWeightBold);
+    color: var(--colorH2);
+    line-height: var(--fontSizeH2);
+    font-size: var(--fontSizeH2);
+}
+
+h3 {
+    color: var(--colorH3);
+    font-weight: var(--fontWeightRegular);
+    line-height: var(--fontSizeH3);
+    font-size: var(--fontSizeH3);
+}
+
+h4 {
+    color: var(--colorH4);
+    font-weight: var(--fontWeightMedium);
+    line-height: var(--fontSizeH4);
+    font-size: var(--fontSizeH4);
+}
+
+p {
+    color: var(--colorText);
+    font-weight: var(--fontWeightLight);
+    line-height: var(--fontSizeP);
+    font-size: var(--fontSizeP);
+}
+
+hr {
+    position: fixed;
+    width: 100%;
+    max-width: var(--maxwidth);
+    background: var(--gradient);
+    border: none;
+    height: 2px;
+    border-radius: 100%;
+    margin: 0;
+    z-index: 9;
+}
+
+a svg path {
+    fill: var(--colorIcon);
+}

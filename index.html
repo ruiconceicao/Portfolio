@@ -17,7 +17,7 @@
     <div class="container">
       <header class="primaryHeader">
         <div class="columnLeft">
-          <nav class="menu Large">
+          <nav class="menu Large" role="navigation">
             <ul>
               <li>
                 <a href="">Home</a>
@@ -101,7 +101,7 @@
             </svg>
           </button>
         </div>
-        <div class="columnRight">
+        <div class="columnRight" role="banner">
           <button
             id="toggleLightMode"
             class="toggle"
@@ -139,7 +139,7 @@
       <hr id="hrHeader" />
 
       <div class="menuDrop" data-visible="false">
-        <nav class="menu Small">
+        <nav class="menu Small" role="navigation">
           <ul>
             <li>
               <a href="">Home</a>
@@ -201,7 +201,7 @@
         </nav>
         <hr />
       </div>
-      <main>
+      <main role="main">
         <section class="sectionBanner">
           <div class="columnLeft">
             <h1>Olá 👋,<br />O meu nome é<br /><span>Rui Conceição</span></h1>
@@ -224,6 +224,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 preserveAspectRatio="xMidYMid"
+                role="img"
                 fill="#000000"
               >
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -282,41 +283,19 @@
                 </g>
               </svg>
               <svg
-                width="100"
-                viewBox="-52.5 0 361 361"
                 xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMid"
-                fill=""
+                width="100"
+                viewBox="0 0 1000 1000"
+                role="img"
+                aria-labelledby="css-logo-title css-logo-description"
               >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M127.844 360.088L23.662 331.166.445 70.766h255.11l-23.241 260.36-104.47 28.962z"
-                    fill="#264DE4"
-                  ></path>
-                  <path
-                    d="M212.417 314.547l19.86-222.49H128V337.95l84.417-23.403z"
-                    fill="#2965F1"
-                  ></path>
-                  <path
-                    d="M53.669 188.636l2.862 31.937H128v-31.937H53.669zM47.917 123.995l2.903 31.937H128v-31.937H47.917zM128 271.58l-.14.037-35.568-9.604-2.274-25.471h-32.06l4.474 50.146 65.421 18.16.147-.04V271.58z"
-                    fill="#EBEBEB"
-                  ></path>
-                  <path
-                    class="stackSVG"
-                    d="M60.484 0h38.68v16.176H76.66v16.176h22.506v16.175H60.484V0zM106.901 0h38.681v14.066h-22.505v2.813h22.505v32.352h-38.68V34.46h22.505v-2.813H106.9V0zM153.319 0H192v14.066h-22.505v2.813H192v32.352h-38.681V34.46h22.505v-2.813H153.32V0z"
-                    fill="#000"
-                  ></path>
-                  <path
-                    d="M202.127 188.636l5.765-64.641H127.89v31.937h45.002l-2.906 32.704H127.89v31.937h39.327l-3.708 41.42-35.62 9.614v33.226l65.473-18.145.48-5.396 7.506-84.08.779-8.576z"
-                    fill="#FFF"
-                  ></path>
-                </g>
+                <path
+                  fill="#639"
+                  d="M0 0H840A160 160 0 0 1 1000 160V840A160 160 0 0 1 840 1000H160A160 160 0 0 1 0 840V0Z"
+                />
+                <path
+                  d="M253 817V649c0-67 43-103 108-103 64-1 104 41 102 112h-74c2-27-10-47-30-46-25 0-32 17-32 49v146c0 31 10 46 32 47 23 0 32-23 30-49h74c4 73-42 116-107 115-63 0-103-35-103-103Zm237-12h69c1 32 11 52 33 52s30-13 30-43c0-25-11-39-38-52l-26-12c-46-22-65-49-65-103 0-60 38-102 100-102s95 43 96 113h-67c0-29-6-49-28-49-20 0-30 10-30 35s9 35 33 45l24 11c51 24 73 55 73 113 0 69-39 107-103 107s-100-44-101-115Zm226 0h70c0 32 11 52 32 52s30-13 30-43c0-25-10-39-38-52l-26-12c-46-22-64-49-64-103 0-60 37-102 100-102s94 43 96 113h-67c-1-29-7-49-29-49-20 0-29 10-29 35s8 35 32 45l25 11c50 24 72 55 72 113 0 69-39 107-103 107s-100-44-101-115Z"
+                />
               </svg>
               <svg
                 width="100"
@@ -615,10 +594,6 @@
             </div>
           </div>
         </section>
-        <h2>Olá h2,<br />O meu nome é<br />Rui Conceição</h2>
-        <h3>Olá h3,<br />O meu nome é<br />Rui Conceição</h3>
-        <h4>Olá h4,<br />O meu nome é<br />Rui Conceição</h4>
-        <p>Olá p,<br />O meu nome é<br />Rui Conceição</p>
       </main>
     </div>
   </body>

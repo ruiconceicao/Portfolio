@@ -1,11 +1,9 @@
-@import url("_variables.css");
-
 /*|-------------------------|
-|                         |
-|          _BASE          |
-|   -Base commun styles   |
-|                         |
-|-------------------------|*/
+  |                         |
+  |          _BASE          |
+  |   -Base commun styles   |
+  |                         |
+  |-------------------------|*/
 * {
     box-sizing: border-box;
 }
@@ -13,18 +11,18 @@
 html {
     font-size: 62.5%;
     font-family: "Poppins", "Roboto", sans-serif;
+    background-color: var(--background);
+    color: var(--colorP);
 }
 
 body {
-    background-color: var(--background);
-    color: var(--colorP);
     margin: 0;
 }
 
 div.container,
 div.menuDrop {
     width: 100%;
-    max-width: 1024px;
+    max-width: var(--maxwidth);
     margin: 0 auto;
 }
 
@@ -36,61 +34,6 @@ main {
 /* TEMPORARY STYLES */
 
 /******************************************************/
-
-/*|----------------|
-  |   TIPOGRAFIA   |
-  |----------------|*/
-
-h1 {
-    color: var(--colorH1);
-    font-weight: var(--fontWeightBold);
-    line-height: var(--fontSizeH1);
-    font-size: var(--fontSizeH1);
-}
-
-h2 {
-    font-weight: var(--fontWeightBold);
-    color: var(--colorH2);
-    line-height: var(--fontSizeH2);
-    font-size: var(--fontSizeH2);
-}
-
-h3 {
-    color: var(--colorH3);
-    font-weight: var(--fontWeightRegular);
-    line-height: var(--fontSizeH3);
-    font-size: var(--fontSizeH3);
-}
-
-h4 {
-    color: var(--colorH4);
-    font-weight: var(--fontWeightMedium);
-    line-height: var(--fontSizeH4);
-    font-size: var(--fontSizeH4);
-}
-
-p {
-    color: var(--colorText);
-    font-weight: var(--fontWeightLight);
-    line-height: var(--fontSizeP);
-    font-size: var(--fontSizeP);
-}
-
-hr {
-    position: fixed;
-    width: 100%;
-    max-width: 1024px;
-    background: var(--gradient);
-    border: none;
-    height: 2px;
-    border-radius: 100%;
-    margin: 0;
-    z-index: 9;
-}
-
-a svg path {
-    fill: var(--colorIcon);
-}
 
 .primaryHeader {
     padding: 0 10px;
@@ -212,10 +155,11 @@ nav.menu ul li a {
     |   SECTION BANNER   |
     |--------------------|*/
 .sectionBanner {
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10% 0;
+    margin: 15.5% auto;
 }
 
 .sectionBanner .columnLeft h1 span {
@@ -234,9 +178,9 @@ nav.menu ul li a {
     justify-content: center;
     align-items: center;
     width: calc(100vw * 0.35);
-    max-width: 350px;
+    max-width: 300px;
     height: calc(100vw * 0.35);
-    max-height: 350px;
+    max-height: 300px;
 }
 
 .sectionBanner .columnRight::before {
@@ -256,8 +200,8 @@ nav.menu ul li a {
 }
 
 .sectionBanner .columnRight img#avatar {
-    width: calc((100vw * 0.35) - 10px);
-    max-width: 330px;
+    width: calc((100vw * 0.35) - 5px);
+    max-width: 290px;
     border-radius: 100%;
 }
 
@@ -273,22 +217,24 @@ nav.menu ul li a {
 }
 
 .sectionStacks header h2 {
-    margin-bottom: 2%;
+    margin-bottom: 10px;
 }
 
 .sectionStacks header h3 {
-    margin-top: 2%;
+    margin-top: 10px;
 }
 
 .stackImagesContainer .Top.StackContainer,
-.Bottom.StackContainer {
+.stackImagesContainer .Bottom.StackContainer {
+    margin: 0 auto;
+    margin-top: 3%;
+    max-width: 1024px;
     user-select: none;
     pointer-events: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2%;
-    margin-top: 3%;
 }
 
 .stackImagesContainer svg {
