@@ -46,13 +46,15 @@ div.menuDrop[data-visible="false"] {
     transform: scale(1.2);
 }
 
-.projectsContainer .projectBox {
-    transition: transform 0.2s, opacity 0.2s ease-out;
-}
+@media (hover: hover) and (pointer: fine) {
+    .projectsContainer .projectBox {
+        transition: transform 0.2s, opacity 0.2s ease-out;
+    }
 
-.projectsContainer:hover>:not(:hover) {
-    opacity: 0.4;
-    transform: scale(0.95);
+    .projectsContainer:hover>:not(:hover) {
+        opacity: 0.4;
+        transform: scale(0.95);
+    }
 }
 
 nav.menu ul li a:focus,
