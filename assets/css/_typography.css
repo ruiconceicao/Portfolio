@@ -9,6 +9,7 @@ h1 {
     color: var(--colorH1);
     font-weight: var(--fontWeightBold);
     line-height: var(--fontSizeH1);
+    line-height: calc(var(--fontSizeH1) + 0.5rem);
     font-size: var(--fontSizeH1);
 }
 
@@ -16,6 +17,7 @@ h2 {
     font-weight: var(--fontWeightBold);
     color: var(--colorH2);
     line-height: var(--fontSizeH2);
+    line-height: calc(var(--fontSizeH2) + 0.5rem);
     font-size: var(--fontSizeH2);
 }
 
@@ -23,6 +25,7 @@ h3 {
     color: var(--colorH3);
     font-weight: var(--fontWeightRegular);
     line-height: var(--fontSizeH3);
+    line-height: calc(var(--fontSizeH3) + 0.5rem);
     font-size: var(--fontSizeH3);
 }
 
@@ -30,14 +33,31 @@ h4 {
     color: var(--colorH4);
     font-weight: var(--fontWeightMedium);
     line-height: var(--fontSizeH4);
+    line-height: calc(var(--fontSizeH4) + 0.5rem);
     font-size: var(--fontSizeH4);
+
 }
 
-p {
-    color: var(--colorText);
+p,
+small,
+strong {
+    color: var(--colorP);
     font-weight: var(--fontWeightLight);
-    line-height: var(--fontSizeP);
+    line-height: calc(var(--fontSizeP) + 0.5rem);
     font-size: var(--fontSizeP);
+}
+
+small {
+    color: var(--colorH1);
+    line-height: calc(var(--fontSizeSmall) + 0.5rem);
+    font-size: var(--fontSizeSmall);
+    margin: 0 auto;
+}
+
+strong {
+    color: var(--colorH1);
+    font-weight: var(--fontWeightMedium);
+    margin: 0 auto;
 }
 
 hr {
@@ -53,5 +73,13 @@ hr {
 }
 
 a svg path {
-    fill: var(--colorIcon);
+    fill: var(--colorPrimaryMenu);
+}
+
+.sectionBanner #avatar,
+.stackImagesContainer .Top.StackContainer,
+.stackImagesContainer .Bottom.StackContainer,
+.primaryHeader .columnRight .logo,
+img {
+    user-select: none;
 }

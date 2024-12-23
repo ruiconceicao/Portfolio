@@ -24,29 +24,45 @@
     }
 
     100% {
-        transform: translateY(-100%);
+        transform: translateY(-110%);
         visibility: hidden;
         display: none;
     }
 }
 
 div.menuDrop[data-visible="true"] {
-    animation: dropDown 0.5s ease forwards;
+    animation: dropDown 0.5s ease-out forwards;
 }
 
 div.menuDrop[data-visible="false"] {
-    animation: dropUp 0.25s ease forwards;
+    animation: dropUp 0.3s ease-out forwards;
+}
+
+.stackImagesContainer svg {
+    transition: transform 0.2s;
+}
+
+.stackImagesContainer svg:hover {
+    transform: scale(1.2);
+}
+
+.projectsContainer .projectBox {
+    transition: transform 0.2s, opacity 0.2s ease-out;
+}
+
+.projectsContainer:hover>:not(:hover) {
+    opacity: 0.4;
+    transform: scale(0.95);
 }
 
 nav.menu ul li a:focus,
 nav.menu ul li a:hover,
 nav.menu ul li a:focus svg path,
 nav.menu ul li a:hover svg path {
-    color: var(--gradientMid) !important;
-    fill: var(--gradientMid) !important;
+    color: var(--colorHoverMenu);
+    fill: var(--colorHoverMenu);
 }
 
-.primaryHeader button.toggle:hover svg,
-.primaryHeader button.toggle:focus svg {
-    fill: var(--colorText) !important;
+.primaryHeader button.toggle:hover svg {
+    fill: var(--colorH2);
 }

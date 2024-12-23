@@ -6,7 +6,7 @@
   |----------------------|*/
 
 :root {
-    --maxwidth: 1280px;
+    --maxwidth: 1440px;
     --grey01: #191919;
     --grey02: #363636;
     --grey03: #666666;
@@ -31,35 +31,45 @@
             var(--gradientMid) 30%,
             var(--colorH2) 70%);
     /* 7.5vw = minimum_font-size / 320px */
-    --fontSizeH1: clamp(2.4rem, 7.5vw, 5.8rem);
+    /* --fontSizeH1: clamp(2.4rem, 7.5vw, 5.8rem);
     --fontSizeH2: clamp(2.1rem, 6.56vw, 4.8rem);
     --fontSizeH3: clamp(1.8rem, 5.62vw, 3.2rem);
     --fontSizeH4: clamp(1.5rem, 4.68vw, 2.8rem);
     --fontSizeP: clamp(1.2rem, 3.75vw, 1.8rem);
+    --fontSizeSmall: clamp(1.0rem, 3.125vw, 1.6rem); */
+
+    --fontSizeH1: clamp(2.4rem, 5.665vw, 5.8rem);
+    --fontSizeH2: clamp(2.1rem, 4.688vw, 4.8rem);
+    --fontSizeH3: clamp(1.8rem, 3.125vw, 3.2rem);
+    --fontSizeH4: clamp(1.5rem, 2.734vw, 2.8rem);
+    --fontSizeP: clamp(1.2rem, 1.758vw, 1.8rem);
+    --fontSizeSmall: clamp(1.0rem, 1.563vw, 1.6rem);
 }
 
 html[data-theme="light"] {
     --reversedBackground: var(--grey01);
     --background: var(--white);
+
     --colorH1: var(--blue01);
     --colorH2: var(--blue01);
     --colorH3: var(--grey03);
     --colorH4: var(--blue01);
     --colorP: var(--grey03);
+
     --colorPrimaryMenu: var(--grey03);
-    --colorIcon: var(--grey03);
-    --colorText: var(--blue01);
+    --colorHoverMenu: var(--blue01);
 }
 
 html[data-theme="dark"] {
     --background: var(--grey01);
     --reversedBackground: var(--white);
+
     --colorH1: var(--grey05);
     --colorH2: var(--grey05);
     --colorH3: var(--grey04);
     --colorH4: var(--grey05);
     --colorP: var(--grey05);
+
     --colorPrimaryMenu: var(--grey04);
-    --colorIcon: var(--grey04);
-    --colorText: var(--white);
+    --colorHoverMenu: var(--white);
 }

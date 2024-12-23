@@ -19,6 +19,10 @@
   .primaryHeader .columnLeft .menu.Large {
     display: none;
   }
+
+  .sectionProjects .projectsContainer {
+    justify-content: space-evenly;
+  }
 }
 
 /*|-------------------|
@@ -35,10 +39,11 @@
   .primaryHeader .columnLeft .toggle,
   .menuDrop,
   .menu.Small,
-  #hrHeader {
+  .hrHeader {
     visibility: hidden !important;
-    display: none;
+    display: none !important;
   }
+
 }
 
 /*|-------------------|
@@ -55,9 +60,9 @@
   .primaryHeader .columnLeft .toggle,
   .menuDrop,
   .menu.Small,
-  #hrHeader {
+  .hrHeader {
     visibility: hidden !important;
-    display: none;
+    display: none !important;
   }
 }
 

@@ -27,7 +27,19 @@ div.menuDrop {
 }
 
 main {
-    margin: 0px 5px;
+    margin: 0 0px;
+}
+
+main>section {
+    margin: 15.5% auto;
+}
+
+section>header {
+    text-align: center;
+}
+
+section>header>* {
+    margin: 2.5% 0;
 }
 
 /******************************************************/
@@ -83,7 +95,7 @@ nav.menu.Small ul {
 
 nav.menu ul li a {
     display: flex;
-    font-size: 2rem;
+    font-weight: var(--fontWeightMedium);
     font-size: clamp(1.6rem, 5vw, 2rem);
     color: var(--colorPrimaryMenu);
     text-decoration: none;
@@ -107,11 +119,6 @@ nav.menu ul li a {
 /*      |----------|
         |   LOGO   |
         |----------|*/
-.primaryHeader .columnRight .logo {
-    user-select: none;
-    pointer-events: none
-}
-
 .primaryHeader .columnRight .logo .rui {
     transform: rotateY(180deg);
     font-size: clamp(2.5rem, 7.81vw, 4rem);
@@ -144,7 +151,8 @@ nav.menu ul li a {
 }
 
 .primaryHeader button.toggle svg {
-    stroke: var(--colorText);
+    width: 30px;
+    stroke: var(--colorH2);
 }
 
 /*  |---------------------------------|
@@ -152,14 +160,13 @@ nav.menu ul li a {
     |---------------------------------|*/
 
 /*  |--------------------|
-    |   SECTION BANNER   |
+    |   BANNER SECTION   |
     |--------------------|*/
 .sectionBanner {
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 15.5% auto;
 }
 
 .sectionBanner .columnLeft h1 span {
@@ -169,8 +176,6 @@ nav.menu ul li a {
 }
 
 .sectionBanner .columnRight {
-    user-select: none;
-    pointer-events: none;
     position: relative;
     border-radius: 100%;
     overflow: hidden;
@@ -181,11 +186,10 @@ nav.menu ul li a {
     max-width: 300px;
     height: calc(100vw * 0.35);
     max-height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 25px;
 }
 
 .sectionBanner .columnRight::before {
-    user-select: none;
-    pointer-events: none;
     content: "";
     width: 100%;
     height: 100%;
@@ -206,38 +210,28 @@ nav.menu ul li a {
 }
 
 /*  |---------------------------|
-    |   FIM DO SECTION BANNER   |
+    |   FIM DO BANNER SECTION   |
     |---------------------------|*/
 
 /*  |--------------------|
-    |   SECTION STACKS   |
+    |   STACKS SECTION   |
     |--------------------|*/
-.sectionStacks header {
-    text-align: center;
-}
-
-.sectionStacks header h2 {
-    margin-bottom: 10px;
-}
-
-.sectionStacks header h3 {
-    margin-top: 10px;
+.stackImagesContainer {
+    max-width: 1024px;
+    margin: 5% auto;
 }
 
 .stackImagesContainer .Top.StackContainer,
 .stackImagesContainer .Bottom.StackContainer {
-    margin: 0 auto;
-    margin-top: 3%;
-    max-width: 1024px;
-    user-select: none;
-    pointer-events: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2%;
+    gap: 2.5%;
+    margin-bottom: 2.5%;
 }
 
 .stackImagesContainer svg {
+    width: 100px;
     fill: var(--background);
 }
 
@@ -246,5 +240,89 @@ nav.menu ul li a {
 }
 
 /*  |---------------------------|
-    |   FIM DO SECTION STACKS   |
+    |   FIM DO STACKS SECTION   |
     |---------------------------|*/
+/*  |---------------------|
+    |   PROJECT SECTION   |
+    |---------------------|*/
+.sectionProjects .projectsContainer {
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    margin: 5% auto;
+    gap: 1%;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    z-index: 5;
+}
+
+.projectsContainer .projectBox>img {
+    width: 100%;
+}
+
+.projectsContainer .projectBox {
+    min-width: 250px;
+    z-index: 7;
+    width: 30%;
+    border-radius: 20px;
+    overflow: hidden;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 25px; */
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 20px 1px;
+    position: relative;
+}
+
+.projectBox .projectsContent {
+    padding: 5% 5% 5% 5%;
+}
+
+.projectsContent * {
+    margin: 0 0 7.5% 0;
+}
+
+.projectsContent p.pTechStack {
+    text-align: center;
+}
+
+.techStackSVG {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.techStackSVG svg {
+    width: calc(var(--fontSizeP) * 2);
+}
+
+.techStackSVG .stackSVG,
+.projectLinks .stackSVG {
+    fill: var(--reversedBackground);
+}
+
+.projectActions {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+.projectActions .projectLinks>a {
+    display: flex;
+    gap: 5px;
+}
+
+.projectActions .projectLinks svg {
+    width: calc(var(--fontSizeSmall) + 5px);
+}
+
+.projectLinks small {
+    text-decoration: underline;
+    color: var(--reversedBackground);
+    margin: 0;
+    font-weight: var(--fontWeightRegular);
+}
+
+/*  |----------------------------|
+    |   FIM DO PROJECT SECTION   |
+    |----------------------------|*/
