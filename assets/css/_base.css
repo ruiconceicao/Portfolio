@@ -117,11 +117,11 @@ nav.menu ul li a {
 }
 
 #theme-switch #light,
-.darkmode #theme-switch #dark {
+[data-theme="dark"] #theme-switch #dark {
     display: none;
 }
 
-.darkmode #theme-switch #light {
+[data-theme="dark"] #theme-switch #light {
     display: block;
 }
 

@@ -1,20 +1,32 @@
-let darkmode = localStorage.getItem("darkmode");
 const themeSwitch = document.querySelector("#theme-switch");
-const html = document.querySelector("html");
+const localStorageTheme = sessionStorage.getItem("theme");
+const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-const enableDarkmode = () => {
-  html.classList.add("darkmode");
-  localStorage.setItem("darkmode", "active");
-};
+function calculateSettingTheme(localStorageTheme, systemSettingDark) {
+  if (localStorageTheme !== null) {
+    return localStorageTheme;
+  }
+  if (systemSettingDark.matches) {
+    return "dark";
+  }
+  return "light";
+}
 
-const disableDarkmode = () => {
-  html.classList.remove("darkmode");
-  localStorage.setItem("darkmode", null);
-};
+function updateThemeOnHtml(theme) {
+  document.querySelector("html").setAttribute("data-theme", theme);
+}
+let currentThemeSetting = calculateSettingTheme(
+  localStorageTheme,
+  systemSettingDark
+);
 
-if (darkmode === "active") enableDarkmode();
+updateThemeOnHtml(currentThemeSetting);
 
 themeSwitch.addEventListener("click", () => {
-  darkmode = localStorage.getItem("darkmode");
-  darkmode !== "active" ? enableDarkmode() : disableDarkmode();
+  const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+
+  sessionStorage.setItem("theme", newTheme);
+
+  updateThemeOnHtml(newTheme);
+  currentThemeSetting = newTheme;
 });

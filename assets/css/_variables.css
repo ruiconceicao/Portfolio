@@ -60,7 +60,7 @@ html {
     --colorHoverMenu: var(--blue01);
 }
 
-html.darkmode {
+html[data-theme="dark"] {
     --background: var(--grey01);
     --reversedBackground: var(--white);
 
