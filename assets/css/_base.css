@@ -116,6 +116,15 @@ nav.menu ul li a {
     gap: 10%;
 }
 
+#theme-switch #light,
+.darkmode #theme-switch #dark {
+    display: none;
+}
+
+.darkmode #theme-switch #light {
+    display: block;
+}
+
 /*      |----------|
         |   LOGO   |
         |----------|*/
@@ -150,8 +159,7 @@ nav.menu ul li a {
     padding: 0;
 }
 
-.primaryHeader button.toggle svg {
-    width: 30px;
+button.toggle svg {
     stroke: var(--colorH2);
 }
 

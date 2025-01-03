@@ -72,6 +72,10 @@ hr {
     z-index: 9;
 }
 
+svg {
+    width: 30px;
+}
+
 a svg path {
     fill: var(--colorPrimaryMenu);
 }

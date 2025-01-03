@@ -1,9 +1,9 @@
-/*|----------------------|
-  |                      |
-  |      _VARIABLES      |
-  |   -Variables file-   |
-  |                      |
-  |----------------------|*/
+/*|--------------------|
+  |                    |
+  |     _VARIABLES     |
+  |   -Variables file   |
+  |                    |
+  |--------------------|*/
 
 :root {
     --maxwidth: 1440px;
@@ -46,7 +46,7 @@
     --fontSizeSmall: clamp(1.0rem, 1.563vw, 1.6rem);
 }
 
-html[data-theme="light"] {
+html {
     --reversedBackground: var(--grey01);
     --background: var(--white);
 
@@ -60,7 +60,7 @@ html[data-theme="light"] {
     --colorHoverMenu: var(--blue01);
 }
 
-html[data-theme="dark"] {
+html.darkmode {
     --background: var(--grey01);
     --reversedBackground: var(--white);
 

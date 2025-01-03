@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt" data-theme="dark">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +10,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <script src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/darkmode.js" defer></script>
     <title>Portfólio - Rui Conceição</title>
   </head>
   <body>
@@ -106,12 +107,12 @@
         <div class="columnRight" role="banner">
           <button
             aria-label="Mudar modo de luz"
-            id="toggleLightMode"
+            id="theme-switch"
             class="toggle"
-            onclick="toggleLightMode()"
             role="button"
           >
             <svg
+              id="light"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 25 25"
               fill="none"
@@ -130,6 +131,19 @@
               <path d="M20 12h2" />
               <path d="m6.34 17.66-1.41 1.41" />
               <path d="m19.07 4.93-1.41 1.41" />
+            </svg>
+            <svg
+              id="dark"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 25 25"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-moon"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
             </svg>
           </button>
           <div class="logo">
@@ -166,8 +180,6 @@
                 target="_blank"
               >
                 <svg
-                  width="30"
-                  height="30"
                   viewBox="0 0 30 30"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +200,6 @@
                 target="_blank"
               >
                 <svg
-                  width="30"
                   viewBox="0 0 30 30"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
