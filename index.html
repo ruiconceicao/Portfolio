@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Wet+Paint&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script type="text/javascript" src="assets/js/darkmode.js" defer></script>
@@ -17,23 +21,65 @@
   <body>
     <div class="container">
       <header class="primaryHeader">
-        <div class="columnLeft">
+        <div class="columnLeft" role="banner">
+          <div class="logo">
+            <h2 class="rui">RUI</h2>
+            <h2 class="dev">.dev</h2>
+          </div>
+          <button
+            aria-label="Mudar modo de luz"
+            id="theme-switch"
+            class="toggle"
+            role="button"
+          >
+            <svg
+              id="light"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 25 25"
+              fill="var(--background)"
+              stroke-width="2.5"
+              stroke-linecap="round"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2" />
+              <path d="M12 20v2" />
+              <path d="m4.93 4.93 1.41 1.41" />
+              <path d="m17.66 17.66 1.41 1.41" />
+              <path d="M2 12h2" />
+              <path d="M20 12h2" />
+              <path d="m6.34 17.66-1.41 1.41" />
+              <path d="m19.07 4.93-1.41 1.41" />
+            </svg>
+            <svg
+              id="dark"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="var(--background)"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+          </button>
+        </div>
+        <div class="columnRight">
           <nav class="menu Large" role="navigation">
             <ul>
               <li>
-                <a href="">Home</a>
+                <a href="index.html">Home</a>
               </li>
               <li>
-                <a href="">Sobre</a>
+                <a href="about.html">Sobre</a>
               </li>
               <li>
-                <a href="">Stack</a>
+                <a href="stack.html">Stack</a>
               </li>
               <li>
-                <a href="">Projetos</a>
+                <a href="projects.html">Projetos</a>
               </li>
               <li>
-                <a href="">Contacto</a>
+                <a href="contact.html">Contacto</a>
               </li>
               <li>
                 <a
@@ -79,6 +125,8 @@
               </li>
             </ul>
           </nav>
+        </div>
+        <div class="mobile-menu-button">
           <button
             aria-label="Abrir e Fechar Menu"
             id="toggleMenu"
@@ -89,7 +137,6 @@
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="30"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -104,53 +151,6 @@
             </svg>
           </button>
         </div>
-        <div class="columnRight" role="banner">
-          <button
-            aria-label="Mudar modo de luz"
-            id="theme-switch"
-            class="toggle"
-            role="button"
-          >
-            <svg
-              id="light"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 25 25"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-sun"
-            >
-              <circle cx="12" cy="12" r="4" />
-              <path d="M12 2v2" />
-              <path d="M12 20v2" />
-              <path d="m4.93 4.93 1.41 1.41" />
-              <path d="m17.66 17.66 1.41 1.41" />
-              <path d="M2 12h2" />
-              <path d="M20 12h2" />
-              <path d="m6.34 17.66-1.41 1.41" />
-              <path d="m19.07 4.93-1.41 1.41" />
-            </svg>
-            <svg
-              id="dark"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 25 25"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-moon"
-            >
-              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-            </svg>
-          </button>
-          <div class="logo">
-            <h2 class="rui">RUI</h2>
-            <h2 class="dev">.dev</h2>
-          </div>
-        </div>
       </header>
       <!--
       <hr class="hrHeader" />
@@ -159,19 +159,19 @@
         <nav class="menu Small" role="navigation">
           <ul>
             <li>
-              <a href="">Home</a>
+              <a href="index.html">Home</a>
             </li>
             <li>
-              <a href="">Sobre</a>
+              <a href="about.html">Sobre</a>
             </li>
             <li>
-              <a href="">Stack</a>
+              <a href="stack.html">Stack</a>
             </li>
             <li>
-              <a href="">Projetos</a>
+              <a href="projects.html">Projetos</a>
             </li>
             <li>
-              <a href="">Contacto</a>
+              <a href="contact.html">Contacto</a>
             </li>
             <li>
               <a
@@ -551,6 +551,7 @@
                       rx="28"
                     ></rect>
                     <path
+                      fill="whitesmoke"
                       d="M186.377012,94.197636 L186.377012,160.424478 C186.377012,183.243286 184.707519,194.187745 179.699037,203.649406 C175.060358,212.741266 168.937684,218.490548 156.323731,224.798721 L129.794937,212.183571 C142.410087,206.247593 148.531564,201.05481 152.427049,193.074749 C156.509231,184.91278 157.808923,175.451119 157.808923,150.593015 L157.808923,94.197636 L186.377012,94.197636 Z M140.928486,50.0787207 L140.928486,182.316986 C126.272844,185.099476 115.512688,186.212472 103.826231,186.212472 C68.9487718,186.212472 50.7686431,170.445031 50.7686431,140.205054 C50.7686431,111.079269 70.0629644,92.1583404 99.9295492,92.1583404 C104.567032,92.1583404 108.091519,92.5281423 112.359199,93.6411381 L112.359199,50.0787207 L140.928486,50.0787207 Z M102.713236,115.160254 C88.243093,115.160254 79.8944275,124.065418 79.8944275,139.647359 C79.8944275,154.860696 87.8720944,163.208164 102.527736,163.208164 C105.680028,163.208164 108.278215,163.022665 112.359199,162.467364 L112.359199,116.643052 C109.020212,115.531253 106.237722,115.160254 102.713236,115.160254 Z M186.377012,50.2307105 L186.377012,79.5419941 L157.808923,79.5419941 L157.808923,50.2307105 L186.377012,50.2307105 Z"
                       fill-opacity="1"
                     ></path>
@@ -756,6 +757,89 @@
           </div>
         </section>
       </main>
+      <footer>
+        <div class="topFooter">
+          <div class="logo">
+            <h2 class="rui">RUI</h2>
+            <h2 class="dev">.dev</h2>
+          </div>
+          <div class="contacts">
+            <!-- <div class="mail">
+              <a href="mailto:ruiconceicao.dev@gmail.com"
+                ><p>ruiconceicao.dev@gmail.com</p></a
+              >
+            </div> -->
+            <div class="socials">
+              <ul>
+                <li class="mail">
+                  <a href="mailto:ruiconceicao.dev@gmail.com"
+                    ><p>ruiconceicao.dev@gmail.com</p></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/ruiconceicao"
+                    aria-label="Check out my GitHub page"
+                    target="_blank"
+                  >
+                    <svg
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M15 0C6.7125 0 0 6.7125 0 15C0 21.6375 4.29375 27.2438 10.2563 29.2313C11.0063 29.3625 11.2875 28.9125 11.2875 28.5188C11.2875 28.1625 11.2688 26.9813 11.2688 25.725C7.5 26.4188 6.525 24.8063 6.225 23.9625C6.05625 23.5313 5.325 22.2 4.6875 21.8438C4.1625 21.5625 3.4125 20.8688 4.66875 20.85C5.85 20.8313 6.69375 21.9375 6.975 22.3875C8.325 24.6563 10.4812 24.0188 11.3438 23.625C11.475 22.65 11.8688 21.9938 12.3 21.6188C8.9625 21.2438 5.475 19.95 5.475 14.2125C5.475 12.5813 6.05625 11.2313 7.0125 10.1813C6.8625 9.80625 6.3375 8.26875 7.1625 6.20625C7.1625 6.20625 8.41875 5.8125 11.2875 7.74375C12.4875 7.40625 13.7625 7.2375 15.0375 7.2375C16.3125 7.2375 17.5875 7.40625 18.7875 7.74375C21.6563 5.79375 22.9125 6.20625 22.9125 6.20625C23.7375 8.26875 23.2125 9.80625 23.0625 10.1813C24.0187 11.2313 24.6 12.5625 24.6 14.2125C24.6 19.9688 21.0938 21.2438 17.7563 21.6188C18.3 22.0875 18.7688 22.9875 18.7688 24.3938C18.7688 26.4 18.75 28.0125 18.75 28.5188C18.75 28.9125 19.0312 29.3813 19.7812 29.2313C22.759 28.2259 25.3465 26.3121 27.1796 23.7592C29.0127 21.2063 29.9991 18.1429 30 15C30 6.7125 23.2875 0 15 0Z"
+                        fill="#666666"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/rui-filipe-conceicao"
+                    aria-label="Check out my LinkedIn profile"
+                    target="_blank"
+                  >
+                    <svg
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M15 0.599976C7.04701 0.599976 0.600006 7.04698 0.600006 15C0.600006 22.953 7.04701 29.4 15 29.4C22.953 29.4 29.4 22.953 29.4 15C29.4 7.04698 22.953 0.599976 15 0.599976ZM11.475 20.9685H8.55901V11.5845H11.475V20.9685ZM9.99901 10.4325C9.07801 10.4325 8.48251 9.77997 8.48251 8.97297C8.48251 8.14948 9.09601 7.51648 10.0365 7.51648C10.977 7.51648 11.553 8.14948 11.571 8.97297C11.571 9.77997 10.977 10.4325 9.99901 10.4325ZM22.125 20.9685H19.209V15.768C19.209 14.5575 18.786 13.7355 17.7315 13.7355C16.926 13.7355 16.4475 14.292 16.236 14.8275C16.158 15.018 16.1385 15.288 16.1385 15.5565V20.967H13.221V14.577C13.221 13.4055 13.1835 12.426 13.1445 11.583H15.678L15.8115 12.8865H15.87C16.254 12.2745 17.1945 11.3715 18.768 11.3715C20.6865 11.3715 22.125 12.657 22.125 15.42V20.9685Z"
+                        fill="#666666"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bottomFooter">
+          <nav>
+            <ul>
+              <li>
+                <a href="index.html"><p>Home</p></a>
+              </li>
+              <li>
+                <a href="about.html"><p>Sobre</p></a>
+              </li>
+              <li>
+                <a href="stack.html"><p>Stack</p></a>
+              </li>
+              <li>
+                <a href="projects.html"><p>Projetos</p></a>
+              </li>
+              <li>
+                <a href="contact.html"><p>Contacto</p></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

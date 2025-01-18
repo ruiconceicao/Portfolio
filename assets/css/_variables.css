@@ -58,6 +58,8 @@ html {
 
     --colorPrimaryMenu: var(--grey03);
     --colorHoverMenu: var(--blue01);
+    --colorFooter: var(--blue01);
+    --colorBorder: var(--blue01);
 }
 
 html[data-theme="dark"] {
@@ -72,4 +74,6 @@ html[data-theme="dark"] {
 
     --colorPrimaryMenu: var(--grey04);
     --colorHoverMenu: var(--white);
+    --colorFooter: var(--grey04);
+    --colorBorder: var(--grey03);
 }

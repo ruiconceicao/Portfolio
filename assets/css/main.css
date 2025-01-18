@@ -15,8 +15,8 @@
 /*|--------------------|
   |   MOBILE < 768px   |
   |--------------------|*/
-@media (max-width: 767px) {
-  .primaryHeader .columnLeft .menu.Large {
+@media (max-width: 768px) {
+  .primaryHeader .columnRight .menu.Large {
     display: none;
   }
 
@@ -34,9 +34,9 @@
 /*|---------------------|
   |   TABLET < 1024px   |
   |---------------------|*/
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 769px) and (max-width: 1023px) {
 
-  .primaryHeader .columnLeft .toggle,
+  .primaryHeader .mobile-menu-button .toggle,
   .menuDrop,
   .menu.Small,
   .hrHeader {
@@ -57,7 +57,7 @@
   |----------------------|*/
 @media (min-width: 1024px) {
 
-  .primaryHeader .columnLeft .toggle,
+  .primaryHeader .mobile-menu-button .toggle,
   .menuDrop,
   .menu.Small,
   .hrHeader {

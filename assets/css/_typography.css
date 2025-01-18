@@ -74,6 +74,7 @@ hr {
 
 svg {
     width: 30px;
+    width: clamp(2rem, 6.25vw, 3rem);
 }
 
 a svg path {
@@ -83,7 +84,7 @@ a svg path {
 .sectionBanner #avatar,
 .stackImagesContainer .Top.StackContainer,
 .stackImagesContainer .Bottom.StackContainer,
-.primaryHeader .columnRight .logo,
+.primaryHeader .columnLeft .logo *,
 img {
     user-select: none;
 }

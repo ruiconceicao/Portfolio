@@ -56,10 +56,10 @@ div.menuDrop[data-visible="false"] {
     }
 }
 
-nav.menu ul li a:focus,
-nav.menu ul li a:hover,
-nav.menu ul li a:focus svg path,
-nav.menu ul li a:hover svg path {
+nav ul li a:focus,
+nav ul li a:hover,
+nav ul li a:focus svg path,
+nav ul li a:hover svg path {
     color: var(--colorHoverMenu);
     fill: var(--colorHoverMenu);
 }

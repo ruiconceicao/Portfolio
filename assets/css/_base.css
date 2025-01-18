@@ -6,6 +6,8 @@
   |-------------------------|*/
 * {
     box-sizing: border-box;
+    transition-property: background-color, color, stroke, fill;
+    transition-duration: 0.25s;
 }
 
 html {
@@ -13,6 +15,7 @@ html {
     font-family: "Poppins", "Roboto", sans-serif;
     background-color: var(--background);
     color: var(--colorP);
+    font-optical-sizing: auto;
 }
 
 body {
@@ -32,6 +35,8 @@ main {
 
 main>section {
     margin: 15.5% auto;
+    padding: 0% 1%;
+
 }
 
 section>header {
@@ -48,28 +53,28 @@ section>header>* {
 /******************************************************/
 
 .primaryHeader {
-    padding: 0 10px;
+    width: 100%;
+    padding: 0 1%;
     position: sticky;
     top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-    gap: 10%;
     background-color: var(--background);
 }
 
 /*  |----------|
     |   MENU   |
     |----------|*/
-.primaryHeader .columnLeft {
+.primaryHeader .columnRight {
     width: 80%;
 }
 
 nav.menu ul {
-    gap: 5%;
+    gap: 4%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     list-style-type: none;
     padding: 0;
@@ -94,7 +99,6 @@ nav.menu.Small ul {
 }
 
 nav.menu ul li a {
-    display: flex;
     font-weight: var(--fontWeightMedium);
     font-size: clamp(1.6rem, 5vw, 2rem);
     color: var(--colorPrimaryMenu);
@@ -108,12 +112,12 @@ nav.menu ul li a {
 /*  |--------------------------|
     |   LOGO+DARK/LIGHT MODE   |
     |--------------------------|*/
-.primaryHeader .columnRight {
+.primaryHeader .columnLeft {
     width: 20%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-    gap: 10%;
+    gap: 20%;
 }
 
 #theme-switch #light,
@@ -128,19 +132,20 @@ nav.menu ul li a {
 /*      |----------|
         |   LOGO   |
         |----------|*/
-.primaryHeader .columnRight .logo .rui {
+.logo .rui {
     transform: rotateY(180deg);
     font-size: clamp(2.5rem, 7.81vw, 4rem);
     line-height: clamp(2.5rem, 7.81vw, 4rem);
     font-family: "Press Start 2P", system-ui;
     margin-bottom: 0px;
-    font-weight: var(--fontWeightMedium);
+    font-weight: var(--fontWeightBold);
+
 }
 
-.primaryHeader .columnRight .logo .dev {
+.logo .dev {
     font-size: clamp(1.2rem, 3.75vw, 1.8rem);
     line-height: clamp(1.2rem, 3.75vw, 1.8rem);
-    font-weight: var(--fontWeightSemiBold);
+    font-weight: var(--fontWeightBold);
     text-align: center;
     margin-top: 0;
     background: var(--gradient);
@@ -155,7 +160,6 @@ nav.menu ul li a {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    display: flex;
     padding: 0;
 }
 
@@ -264,12 +268,8 @@ button.toggle svg {
     z-index: 5;
 }
 
-.projectsContainer .projectBox>img {
-    width: 100%;
-}
-
 .projectsContainer .projectBox {
-    min-width: 250px;
+    min-width: 240px;
     z-index: 7;
     width: 30%;
     border-radius: 20px;
@@ -277,6 +277,10 @@ button.toggle svg {
     /* box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 25px; */
     box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 20px 1px;
     position: relative;
+}
+
+.projectsContainer .projectBox>img {
+    width: 100%;
 }
 
 .projectBox .projectsContent {
@@ -328,9 +332,69 @@ button.toggle svg {
     text-decoration: underline;
     color: var(--reversedBackground);
     margin: 0;
-    font-weight: var(--fontWeightRegular);
+    font-weight: var(--fontWeightMedium);
 }
 
 /*  |----------------------------|
     |   FIM DO PROJECT SECTION   |
     |----------------------------|*/
+
+/*  |------------|
+    |   FOOTER   |
+    |------------|*/
+footer {
+    padding: 0 1%;
+}
+
+.topFooter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--colorBorder);
+    padding-bottom: 2.5vh;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.socials ul {
+    display: flex;
+    align-items: center;
+    gap: 2.5vw;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.contacts .mail a,
+.mail p,
+.bottomFooter a,
+.bottomFooter p {
+    text-decoration: none;
+    color: var(--colorFooter);
+    font-weight: var(--fontWeightRegular);
+    font-family: "DM Sans", serif;
+    margin: 0;
+}
+
+.socials path {
+    fill: var(--colorFooter);
+}
+
+.bottomFooter nav ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    gap: 5vw;
+    padding: 0;
+    margin: 5% 0;
+}
+
+/*  |-------------------|
+    |   FIM DO FOOTER   |
+    |-------------------|*/
