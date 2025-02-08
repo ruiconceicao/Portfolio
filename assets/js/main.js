@@ -1,5 +1,5 @@
 function toggleMenu() {
-  const menuDrop = document.querySelector(".menuDrop");
+  const menuDrop = document.querySelector("#menuDrop");
   const dataState = menuDrop.getAttribute("data-visible");
   const buttonMenu = document.querySelector("button#toggleMenu");
   const menuState = menuDrop.style.display;

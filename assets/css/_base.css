@@ -1,16 +1,17 @@
 /*|-------------------------|
   |                         |
   |          _BASE          |
-  |   -Base commun styles   |
+  |   BASE COMMUN STYLES    |
   |                         |
   |-------------------------|*/
 * {
     box-sizing: border-box;
-    transition-property: background-color, color, stroke, fill;
+    transition-property: background-color, color, scrollbar-color;
     transition-duration: 0.25s;
 }
 
 html {
+    scrollbar-color: var(--colorH2) var(--background);
     font-size: 62.5%;
     font-family: "Poppins", "Roboto", sans-serif;
     background-color: var(--background);
@@ -23,35 +24,36 @@ body {
 }
 
 div.container,
-div.menuDrop {
+div#menuDrop {
     width: 100%;
     max-width: var(--maxwidth);
     margin: 0 auto;
 }
 
 main {
-    margin: 0 0px;
+    margin: 0;
 }
 
 main>section {
-    margin: 15.5% auto;
-    padding: 0% 1%;
-
+    padding: 0 5%;
+    margin: 7.5vh 0;
 }
 
-section>header {
+.index-html main>section {
+    margin-bottom: 25vh;
+}
+
+.index-html section>header {
     text-align: center;
 }
 
 section>header>* {
-    margin: 2.5% 0;
+    margin: 1% 0;
 }
 
-/******************************************************/
-/* TEMPORARY STYLES */
-
-/******************************************************/
-
+/*  |----------|
+    |   MENU   |
+    |----------|*/
 .primaryHeader {
     width: 100%;
     padding: 0 1%;
@@ -64,9 +66,6 @@ section>header>* {
     background-color: var(--background);
 }
 
-/*  |----------|
-    |   MENU   |
-    |----------|*/
 .primaryHeader .columnRight {
     width: 80%;
 }
@@ -80,7 +79,7 @@ nav.menu ul {
     padding: 0;
 }
 
-div.menuDrop {
+div#menuDrop {
     z-index: 8;
     background-color: var(--background);
     display: none;
@@ -96,11 +95,12 @@ nav.menu.Small ul {
     row-gap: 10px;
     margin: 0;
     padding: 3% 3%;
+    box-shadow: var(--gradientMid) 0px 25px 100px -20px;
 }
 
 nav.menu ul li a {
     font-weight: var(--fontWeightMedium);
-    font-size: clamp(1.6rem, 5vw, 2rem);
+    font-size: clamp(1.6rem, calc(0.416vw + 14.666px), 2rem);
     color: var(--colorPrimaryMenu);
     text-decoration: none;
 }
@@ -118,15 +118,16 @@ nav.menu ul li a {
     justify-content: flex-start;
     align-items: center;
     gap: 20%;
+    z-index: 1;
 }
 
-#theme-switch #light,
-[data-theme="dark"] #theme-switch #dark {
+.light,
+[data-theme="dark"] .dark {
     display: none;
 }
 
-[data-theme="dark"] #theme-switch #light {
-    display: block;
+[data-theme="dark"] .light {
+    display: inline;
 }
 
 /*      |----------|
@@ -134,8 +135,8 @@ nav.menu ul li a {
         |----------|*/
 .logo .rui {
     transform: rotateY(180deg);
-    font-size: clamp(2.5rem, 7.81vw, 4rem);
-    line-height: clamp(2.5rem, 7.81vw, 4rem);
+    font-size: clamp(2.5rem, calc(1.562vw + 20px), 4rem);
+    line-height: clamp(2.5rem, calc(1.562vw + 20px), 4rem);
     font-family: "Press Start 2P", system-ui;
     margin-bottom: 0px;
     font-weight: var(--fontWeightBold);
@@ -143,8 +144,8 @@ nav.menu ul li a {
 }
 
 .logo .dev {
-    font-size: clamp(1.2rem, 3.75vw, 1.8rem);
-    line-height: clamp(1.2rem, 3.75vw, 1.8rem);
+    font-size: clamp(1.2rem, calc(0.625vw + 10px), 1.8rem);
+    line-height: clamp(1.2rem, calc(0.625vw + 10px), 1.8rem);
     font-weight: var(--fontWeightBold);
     text-align: center;
     margin-top: 0;
@@ -161,6 +162,7 @@ nav.menu ul li a {
     border: none;
     cursor: pointer;
     padding: 0;
+    padding-right: 4vw;
 }
 
 button.toggle svg {
@@ -170,174 +172,6 @@ button.toggle svg {
 /*  |---------------------------------|
     |   FIM DA LOGO+DARK/LIGHT MODE   |
     |---------------------------------|*/
-
-/*  |--------------------|
-    |   BANNER SECTION   |
-    |--------------------|*/
-.sectionBanner {
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.sectionBanner .columnLeft h1 span {
-    background: var(--gradientSimple);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.sectionBanner .columnRight {
-    position: relative;
-    border-radius: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: calc(100vw * 0.35);
-    max-width: 300px;
-    height: calc(100vw * 0.35);
-    max-height: 300px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 25px;
-}
-
-.sectionBanner .columnRight::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: var(--gradientSimple);
-    background-clip: border-box;
-    -webkit-text-fill-color: transparent;
-    left: 0;
-    top: 0;
-    position: absolute;
-    z-index: -1;
-    /* transform: rotate(-90deg); */
-}
-
-.sectionBanner .columnRight img#avatar {
-    width: calc((100vw * 0.35) - 5px);
-    max-width: 290px;
-    border-radius: 100%;
-}
-
-/*  |---------------------------|
-    |   FIM DO BANNER SECTION   |
-    |---------------------------|*/
-
-/*  |--------------------|
-    |   STACKS SECTION   |
-    |--------------------|*/
-.stackImagesContainer {
-    max-width: 1024px;
-    margin: 5% auto;
-}
-
-.stackImagesContainer .Top.StackContainer,
-.stackImagesContainer .Bottom.StackContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2.5%;
-    margin-bottom: 2.5%;
-}
-
-.stackImagesContainer svg {
-    width: 100px;
-    fill: var(--background);
-}
-
-.stackImagesContainer .stackSVG {
-    fill: var(--reversedBackground);
-}
-
-/*  |---------------------------|
-    |   FIM DO STACKS SECTION   |
-    |---------------------------|*/
-/*  |---------------------|
-    |   PROJECT SECTION   |
-    |---------------------|*/
-.sectionProjects .projectsContainer {
-    max-width: 1280px;
-    display: flex;
-    justify-content: space-between;
-    margin: 5% auto;
-    gap: 1%;
-    flex-wrap: wrap;
-    row-gap: 20px;
-    z-index: 5;
-}
-
-.projectsContainer .projectBox {
-    min-width: 240px;
-    z-index: 7;
-    width: 30%;
-    border-radius: 20px;
-    overflow: hidden;
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 25px; */
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 20px 1px;
-    position: relative;
-}
-
-.projectsContainer .projectBox>img {
-    width: 100%;
-}
-
-.projectBox .projectsContent {
-    padding: 5% 5% 5% 5%;
-}
-
-.projectsContent * {
-    margin: 0 0 7.5% 0;
-}
-
-.projectsContent p.pTechStack {
-    text-align: center;
-}
-
-.techStackSVG {
-    display: flex;
-    justify-content: center;
-    gap: 5%;
-}
-
-.techStackSVG svg {
-    width: calc(var(--fontSizeP) * 2);
-}
-
-.techStackSVG .stackSVG,
-.projectLinks .stackSVG {
-    fill: var(--reversedBackground);
-}
-
-.projectActions {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 5%;
-}
-
-.projectActions .projectLinks>a {
-    display: flex;
-    gap: 5px;
-}
-
-.projectActions .projectLinks svg {
-    width: calc(var(--fontSizeSmall) + 5px);
-}
-
-.projectLinks small {
-    text-decoration: underline;
-    color: var(--reversedBackground);
-    margin: 0;
-    font-weight: var(--fontWeightMedium);
-}
-
-/*  |----------------------------|
-    |   FIM DO PROJECT SECTION   |
-    |----------------------------|*/
 
 /*  |------------|
     |   FOOTER   |
@@ -354,6 +188,7 @@ footer {
     flex-wrap: wrap;
     border-bottom: 1px solid var(--colorBorder);
     padding-bottom: 2.5vh;
+
 }
 
 .contacts {
@@ -367,29 +202,29 @@ footer {
     align-items: center;
     gap: 2.5vw;
     padding: 0;
-    list-style-type: none;
     margin: 0;
 }
 
-.contacts .mail a,
-.mail p,
-.bottomFooter a,
-.bottomFooter p {
-    text-decoration: none;
+.socials *,
+.bottomFooter * {
     color: var(--colorFooter);
+    fill: var(--colorFooter);
     font-weight: var(--fontWeightRegular);
     font-family: "DM Sans", serif;
     margin: 0;
 }
 
-.socials path {
-    fill: var(--colorFooter);
+footer ul {
+    list-style-type: none;
+}
+
+footer a {
+    text-decoration: none;
 }
 
 .bottomFooter nav ul {
     display: flex;
     justify-content: flex-start;
-    list-style-type: none;
     gap: 5vw;
     padding: 0;
     margin: 5% 0;
@@ -398,3 +233,282 @@ footer {
 /*  |-------------------|
     |   FIM DO FOOTER   |
     |-------------------|*/
+
+/*****************************/
+/*|-----------------------|
+  |                       |
+  |         _BASE         |
+  |   INDEX.HTML STYLES   |
+  |                       |
+  |-----------------------|*/
+
+/*  |--------------------|
+    |   BANNER SECTION   |
+    |--------------------|*/
+.index-html #sectionBanner {
+    max-width: 1200px;
+    height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    white-space: nowrap;
+}
+
+.index-html #sectionBanner .columnLeft h1>span {
+    background: var(--gradientSimple);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 2;
+}
+
+.index-html #sectionBanner .columnLeft p {
+    margin: 0;
+}
+
+.index-html #sectionBanner .columnRight {
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(var(--fontSizeH1)*4.5);
+    max-width: 305px;
+    height: calc(var(--fontSizeH1)*4.5);
+    max-height: 305px;
+    box-shadow: var(--reversedBackground) 0px 0px 25px -10px;
+}
+
+.index-html #sectionBanner .columnRight::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--gradientSimple);
+    background-clip: border-box;
+    -webkit-text-fill-color: transparent;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(-90deg);
+    display: none;
+}
+
+.index-html #sectionBanner .columnRight img#avatar {
+    background-color: var(--background);
+    width: calc((var(--fontSizeH1)*4.5) - 5px);
+    max-width: 300px;
+    border-radius: 100%;
+    z-index: 0;
+}
+
+/*  |---------------------------|
+    |   FIM DO BANNER SECTION   |
+    |---------------------------|*/
+
+/*  |--------------------|
+    |   STACKS SECTION   |
+    |--------------------|*/
+
+.index-html .stackSvgContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5%;
+    row-gap: 1.5vh;
+    max-width: 1024px;
+    margin: 5% auto;
+}
+
+.index-html .stackSvgContainer .stackCard {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 1rem;
+    box-shadow: var(--reversedBackground) 0px 0px 5px;
+    padding: 1.25vh;
+}
+
+.index-html .stackCard svg {
+    width: calc(var(--fontSizeH4) * 1.25);
+}
+
+.index-html .stackCard h4 {
+    margin: 0;
+}
+
+/*  |---------------------------|
+    |   FIM DO STACKS SECTION   |
+    |---------------------------|*/
+/*  |---------------------|
+    |   PROJECT SECTION   |
+    |---------------------|*/
+.index-html #sectionProjects .projectsContainer {
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5% auto;
+    gap: 2.5%;
+    flex-wrap: wrap;
+    row-gap: 5vh;
+}
+
+.index-html .projectsContainer .projectBox {
+    min-width: 280px;
+    max-width: 380px;
+    width: 30%;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 30px -5px;
+    position: relative;
+}
+
+.index-html .projectsContainer .projectBox>img {
+    width: 100%;
+}
+
+.index-html .projectBox .projectsContent {
+    padding: 5% 5% 5% 5%;
+}
+
+.index-html .projectsContent * {
+    margin: 0 0 1vh 0;
+}
+
+.index-html .projectsContent header,
+.index-html .projectsContent h4 {
+    margin: 0 0 1vh 0;
+}
+
+
+.index-html .projectsContent p.pTechStack {
+    text-align: center;
+}
+
+.index-html .techStackSVG {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    margin: 0 0 4vh 0;
+}
+
+.index-html .techStackSVG svg {
+    width: calc(var(--fontSizeP) * 1.75);
+}
+
+.index-html .projectActions {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+.index-html .projectActions .projectLinks>a {
+    text-decoration: none;
+    display: flex;
+    gap: 5px;
+}
+
+.index-html .projectActions .projectLinks svg {
+    width: calc(var(--fontSizeSmall) + 5px);
+}
+
+.index-html .projectLinks small {
+    text-decoration: none;
+    color: var(--reversedBackground);
+    margin: 0;
+    font-weight: var(--fontWeightMedium);
+}
+
+/*  |----------------------------|
+    |   FIM DO PROJECT SECTION   |
+    |----------------------------|*/
+
+/*****************************/
+/*|-----------------------|
+  |                       |
+  |         _BASE         |
+  |   ABOUT.HTML STYLES   |
+  |                       |
+  |-----------------------|*/
+.about-html section>.content {
+    width: 60%;
+}
+
+/*  |-------------------|
+    |   ABOUT SECTION   |
+    |-------------------|*/
+.about-html .about {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5vw;
+}
+
+
+.about-html .about>.content>header * {
+    margin-top: 0;
+}
+
+.about-html .about article p {
+    margin: 0;
+}
+
+.about-html .linkedin-card {
+    max-width: 50%;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--colorLinkedIn) 0 0 2.5rem;
+}
+
+.about-html .linkedin-card>header {
+    background-color: var(--colorLinkedIn);
+}
+
+.about-html .linkedin-card>header,
+.about-html .linkedin-card>.content {
+    padding: 1.5rem;
+}
+
+.about-html .linkedin-card>header>svg,
+.about-html .linkedin-card img {
+    width: clamp(7rem, 12.7vw, 8rem);
+    vertical-align: middle;
+}
+
+.about-html .linkedin-card>.content>.profile {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.about-html .linkedin-card>.content>.profile>.info>a p {
+    color: var(--colorP);
+    white-space: nowrap;
+    font-weight: var(--fontWeightSemiBold);
+    margin: 0;
+}
+
+.description * {
+    font-weight: var(--fontWeightRegular);
+}
+
+.about-html .linkedin-card img {
+    border-radius: 1rem;
+    width: clamp(7rem, 12.7vw, 8rem);
+}
+
+.about-html .linkedin-card a {
+    text-decoration: none;
+}
+
+.about-html .linkedin-card>div:last-child {
+    margin: 1.5rem;
+}
+
+/*  |--------------------------|
+    |   FIM DA ABOUT SECTION   |
+    |--------------------------|*/

@@ -1,4 +1,3 @@
-const themeSwitch = document.querySelector("#theme-switch");
 const StorageTheme = sessionStorage.getItem("theme");
 const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -13,8 +12,9 @@ function calculateSettingTheme(StorageTheme, systemSettingDark) {
 }
 
 function updateThemeOnHtml(theme) {
-  document.querySelector("html").setAttribute("data-theme", theme);
+  document.documentElement.setAttribute("data-theme", theme);
 }
+
 let currentThemeSetting = calculateSettingTheme(
   StorageTheme,
   systemSettingDark
@@ -22,11 +22,14 @@ let currentThemeSetting = calculateSettingTheme(
 
 updateThemeOnHtml(currentThemeSetting);
 
-themeSwitch.addEventListener("click", () => {
-  const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+document.addEventListener("DOMContentLoaded", () => {
+  const themeSwitch = document.querySelector("#theme-switch");
+  themeSwitch.addEventListener("click", () => {
+    const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
 
-  sessionStorage.setItem("theme", newTheme);
+    sessionStorage.setItem("theme", newTheme);
 
-  updateThemeOnHtml(newTheme);
-  currentThemeSetting = newTheme;
+    updateThemeOnHtml(newTheme);
+    currentThemeSetting = newTheme;
+  });
 });

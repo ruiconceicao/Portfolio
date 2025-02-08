@@ -3,12 +3,12 @@
 @import url("_base.css");
 @import url("_animations.css");
 
-/*|----------------------------------|
-  |                                  |
-  |        MAIN - Mobile first       |
-  |   -Main CSS file for portfolio   |
-  |                                  |
-  |----------------------------------|*/
+/*|-----------------------------------|
+  |                                   |
+  |        MAIN - Mobile first        |
+  |   -MAIN CSS FILE FOR PORTFOLIO-   |
+  |                                   |
+  |-----------------------------------|*/
 
 /******************************************************/
 
@@ -16,13 +16,29 @@
   |   MOBILE < 768px   |
   |--------------------|*/
 @media (max-width: 768px) {
+
   .primaryHeader .columnRight .menu.Large {
     display: none;
   }
 
-  .sectionProjects .projectsContainer {
+  .index-html #sectionProjects .projectsContainer {
     justify-content: space-evenly;
   }
+
+  @media (max-width: 549px) {
+    .index-html #sectionBanner {
+      height: 75vh;
+    }
+
+    .about-html .linkedin-card {
+      display: none;
+    }
+
+    .about-html .about>.content {
+      width: 100%;
+    }
+  }
+
 }
 
 /*|-------------------|
@@ -37,7 +53,7 @@
 @media (min-width: 769px) and (max-width: 1023px) {
 
   .primaryHeader .mobile-menu-button .toggle,
-  .menuDrop,
+  #menuDrop,
   .menu.Small,
   .hrHeader {
     visibility: hidden !important;
@@ -58,7 +74,7 @@
 @media (min-width: 1024px) {
 
   .primaryHeader .mobile-menu-button .toggle,
-  .menuDrop,
+  #menuDrop,
   .menu.Small,
   .hrHeader {
     visibility: hidden !important;

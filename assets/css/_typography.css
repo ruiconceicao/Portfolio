@@ -1,9 +1,15 @@
-/*|-----------------------|
-  |                       |
-  |      _TYPOGRAPHY      |
-  |   -Typography file-   |
-  |                       |
-  |-----------------------|*/
+/*|---------------------|
+  |                     |
+  |     _TYPOGRAPHY     |
+  |   TYPOGRAPHY FILE   |
+  |                     |
+  |---------------------|*/
+h1,
+h2,
+h3,
+h4 {
+    cursor: default;
+}
 
 h1 {
     color: var(--colorH1);
@@ -66,25 +72,22 @@ hr {
     max-width: var(--maxwidth);
     background: var(--gradient);
     border: none;
-    height: 2px;
-    border-radius: 100%;
+    height: 2.5px;
     margin: 0;
     z-index: 9;
 }
 
 svg {
-    width: 30px;
-    width: clamp(2rem, 6.25vw, 3rem);
+    width: clamp(2.5rem, calc(0.52vw + 23.333px), 3rem);
 }
 
 a svg path {
     fill: var(--colorPrimaryMenu);
 }
 
-.sectionBanner #avatar,
-.stackImagesContainer .Top.StackContainer,
-.stackImagesContainer .Bottom.StackContainer,
-.primaryHeader .columnLeft .logo *,
+.index-html #sectionBanner #avatar,
+.index-html .stackSvgContainer .stackCard,
+.logo *,
 img {
     user-select: none;
 }
