@@ -17,7 +17,6 @@ function createPopup(container) {
     popup.remove();
     document.removeEventListener("keypress", closePopup);
     document.removeEventListener("click", closePopup);
-
   };
 
   document.addEventListener("click", closePopup, { once: true });
@@ -48,5 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
       event.stopPropagation();
       createPopup(placement);
     });
+    item.style.color = "rgba(75, 75, 75, 1)";
   });
 });
