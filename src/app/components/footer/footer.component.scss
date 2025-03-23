@@ -1,0 +1,65 @@
+/*  |------------|
+    |   FOOTER   |
+    |------------|*/
+footer {
+  padding: 0 1%;
+}
+
+.topFooter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--colorBorder);
+  padding-bottom: 2.5vh;
+  padding-bottom: 2.5svh;
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.socials ul {
+  display: flex;
+  align-items: center;
+  gap: 2.5vw;
+  padding: 0;
+  margin: 0;
+}
+
+.socials *,
+.bottomFooter * {
+  color: var(--colorFooter);
+  stroke: var(--colorFooter);
+  font-weight: var(--fontWeightRegular);
+  font-family: "DM Sans", serif;
+  margin: 0;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+.bottomFooter nav ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5vw;
+  padding: 0;
+  margin: 5% 0;
+}
+
+li.iconLi {
+  width: clamp(2.5rem, calc(0.52vw + 23.333px), 3rem);
+}
+
+
+/*  |-------------------|
+    |   FIM DO FOOTER   |
+    |-------------------|*/

@@ -1,0 +1,37 @@
+/*  |--------------------|
+    |   STACKS SECTION   |
+    |--------------------|*/
+    
+.stackSvgContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2%;
+  row-gap: 1.5vh;
+  row-gap: 1.5svh;
+  max-width: 1024px;
+  margin: 5% auto;
+}
+
+.stackCard {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 1rem;
+  box-shadow: var(--reversedBackground) 0px 0px 2.5px;
+  padding: 0.75vh;
+  padding: 0.75svh;
+}
+
+.stackCard>div { // svg
+  width: calc(var(--fontSizeH4) * 1.5);
+}
+
+h4 {
+  margin: 0;
+}
+
+/*  |---------------------------|
+    |   FIM DO STACKS SECTION   |
+    |---------------------------|*/

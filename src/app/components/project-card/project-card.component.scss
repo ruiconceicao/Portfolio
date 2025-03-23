@@ -1,0 +1,99 @@
+/*  |---------------------|
+    |   PROJECT SECTION   |
+    |---------------------|*/
+.projectsContainer {
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5% auto;
+  gap: 2.5%;
+  flex-wrap: wrap;
+  row-gap: 5vh;
+  row-gap: 5svh;
+}
+
+.projectBox {
+  /* width: clamp(28rem, calc(35vw - 9.8rem), 35rem); */
+  width: 31%;
+  min-width: 28rem;
+  max-width: 35rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 30px -5px;
+  position: relative;
+}
+
+.projectBox > img {
+  width: 100%;
+}
+.stateBadge {
+  background-color: var(--background);
+  opacity: 0.75;
+  border-radius: 1rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.projectBox .projectsContent {
+  padding: 5% 5% 5% 5%;
+}
+
+.projectsContent * {
+  margin: 0 0 1vh 0;
+  margin: 0 0 1svh 0;
+}
+
+.projectsContent header,
+.projectsContent h4 {
+  margin: 0 0 1vh 0;
+  margin: 0 0 1svh 0;
+}
+
+.projectsContent p.pTechStack {
+  text-align: center;
+}
+
+.techStackSVG {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  margin: 0;
+  padding: 0 0 10% 0;
+}
+
+.techStackSVG > div {
+  width: calc(var(--fontSizeP) * 1.75);
+}
+
+.projectActions {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+}
+
+.projectActions .projectLinks > a {
+  text-decoration: none;
+  display: flex;
+  gap: 5px;
+}
+
+.projectActions .projectLinks svg {
+  width: calc(var(--fontSizeSmall) * 1.25);
+}
+
+.projectLinks small {
+  text-decoration: none;
+  color: var(--reversedBackground);
+  margin: 0;
+  font-weight: var(--fontWeightMedium);
+}
+
+/*  |----------------------------|
+    |   FIM DO PROJECT SECTION   |
+    |----------------------------|*/

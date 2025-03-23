@@ -1,0 +1,88 @@
+@import url(app/assets/_typography.scss);
+@import url(app/assets/_variables.scss);
+@import url(app/assets/_base.scss);
+@import url(app/assets/_animations.scss);
+
+/*|-----------------------------------|
+  |                                   |
+  |        MAIN - Mobile first        |
+  |   -MAIN CSS FILE FOR PORTFOLIO-   |
+  |                                   |
+  |-----------------------------------|*/
+
+/******************************************************/
+
+/*|--------------------|
+  |   MOBILE < 768px   |
+  |--------------------|*/
+@media (max-width: 768px) {
+
+  .primaryHeader .columnRight .menu.Large {
+    display: none;
+  }
+
+  #sectionProjects .projectsContainer {
+    justify-content: space-evenly;
+  }
+
+  @media (max-width: 549px) {
+    #sectionBanner {
+      height: 75vh;
+      height: 75svh;
+    }
+
+    app-linkedin-card {
+      display: none;
+    }
+
+    .about>.content {
+      width: 100% !important;
+    }
+  }
+
+}
+
+/*|-------------------|
+  |   FIM DE MOBILE   |
+  |-------------------|*/
+
+/******************************************************/
+
+/*|---------------------|
+  |   TABLET < 1024px   |
+  |---------------------|*/
+@media (min-width: 769px) and (max-width: 1023px) {
+
+  .primaryHeader .mobile-menu-button .toggle,
+  #menuDrop,
+  .menu.Small,
+  .hrHeader {
+    visibility: hidden !important;
+    display: none !important;
+  }
+
+}
+
+/*|-------------------|
+  |   FIM DE TABLET   |
+  |-------------------|*/
+
+/******************************************************/
+
+/*|----------------------|
+  |   DESKTOP > 1024px   |
+  |----------------------|*/
+@media (min-width: 1024px) {
+
+  .primaryHeader .mobile-menu-button .toggle,
+  #menuDrop,
+  .menu.Small,
+  .hrHeader {
+    visibility: hidden !important;
+    display: none !important;
+  }
+}
+
+/*|--------------------|
+  |   FIM DO DESKTOP   |
+  |--------------------|*/

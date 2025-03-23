@@ -1,0 +1,30 @@
+/*|-----------------------|
+  |                       |
+  |         _BASE         |
+  |   ABOUT.HTML STYLES   |
+  |                       |
+  |-----------------------|*/
+section>.content {
+    width: 60%;
+}
+
+/*  |-------------------|
+    |   ABOUT SECTION   |
+    |-------------------|*/
+.about {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5vw;
+}
+
+.about>.content>header * {
+    margin-top: 0;
+}
+
+.about article p {
+    margin: 0;
+}
+
+/*  |--------------------------|
+    |   FIM DA ABOUT SECTION   |
+    |--------------------------|*/

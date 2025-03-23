@@ -1,0 +1,97 @@
+/*  |----------|
+    |   MENU   |
+    |----------|*/
+.primaryHeader {
+  width: 100%;
+  padding: 0 1%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  background-color: var(--background);
+}
+
+.primaryHeader .columnRight {
+  width: 80%;
+}
+
+nav.menu ul {
+  gap: 4%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+div#menuDrop {
+  width: 100%;
+  z-index: 8;
+  background-color: var(--background);
+  position: fixed;
+  transform: translateY(-300%);
+}
+
+nav.menu.Small ul {
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: center;
+  gap: 5%;
+  row-gap: 10px;
+  margin: 0;
+  padding: 3% 3%;
+  box-shadow: var(--gradientMid) 0px 25px 100px -20px;
+}
+
+nav.menu ul a {
+  font-weight: var(--fontWeightMedium);
+  font-size: clamp(1.6rem, calc(0.416vw + 14.666px), 2rem);
+  color: var(--colorPrimaryMenu);
+  text-decoration: none;
+}
+
+svg,
+li.iconLi,
+.mobile-menu-button button {
+  width: clamp(2.5rem, calc(0.52vw + 23.333px), 3rem);
+}
+.mobile-menu-button button {
+  color: var(--colorH2);
+}
+
+/*  |-----------------|
+    |   FIM DO MENU   |
+    |-----------------|*/
+
+/*  |--------------------------|
+    |   LOGO+DARK/LIGHT MODE   |
+    |--------------------------|*/
+.primaryHeader .columnLeft {
+  width: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20%;
+  z-index: 1;
+}
+
+/*      |----------------|
+        |   LIGHT MODE   |
+        |----------------|*/
+.primaryHeader button.toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 4vw;
+}
+
+button.toggle svg {
+  stroke: var(--colorH2);
+}
+
+/*  |---------------------------------|
+    |   FIM DA LOGO+DARK/LIGHT MODE   |
+    |---------------------------------|*/

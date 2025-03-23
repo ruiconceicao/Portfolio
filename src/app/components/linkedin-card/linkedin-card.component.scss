@@ -1,0 +1,52 @@
+.linkedin-card {
+    /*max-width: 50%;*/
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--colorLinkedIn) 0 0 2.5rem;
+}
+
+.linkedin-card>header {
+    background-color: var(--colorLinkedIn);
+}
+
+.linkedin-card>header,
+.linkedin-card>.content {
+    padding: 1.5rem;
+}
+
+.linkedin-card>header>svg,
+.linkedin-card img {
+    width: clamp(7rem, 12.7vw, 8rem);
+    vertical-align: middle;
+}
+
+.linkedin-card>.content>.profile {
+    display: flex;
+    gap: 5%;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.linkedin-card>.content>.profile>.info>a p {
+    color: var(--colorP);
+    white-space: nowrap;
+    font-weight: var(--fontWeightSemiBold);
+    margin: 0;
+}
+
+.description * {
+    font-weight: var(--fontWeightRegular);
+}
+
+.linkedin-card img {
+    border-radius: 1rem;
+    width: clamp(7rem, 12.7vw, 8rem);
+}
+
+.linkedin-card a {
+    text-decoration: none;
+}
+
+.linkedin-card>div:last-child {
+    margin: 1.5rem;
+}

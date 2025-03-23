@@ -1,0 +1,8 @@
+<div class="stackSvgContainer">
+  @for (svg of svgService.svgs(); track svg.name) {
+  <div class="stackCard">
+    <div [innerHTML]="svgService.getSafeSvg(svg.icon)"></div>
+    <h4>{{ svg.name }}</h4>
+  </div>
+  }
+</div>

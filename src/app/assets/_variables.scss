@@ -1,0 +1,97 @@
+/*|--------------------|
+  |                    |
+  |     _VARIABLES     |
+  |   VARIABLES FILE   |
+  |                    |
+  |--------------------|*/
+
+:root {
+  color-scheme: light dark;
+  --maxwidth: 1440px;
+  --grey01: #191919;
+  --grey02: #363636;
+  --grey03: #666666;
+  --grey04: #a7a7a7;
+  --grey05: #cccccc;
+  --green01: #018c0f;
+  --green02: #d7ffe0;
+  --blue01: #38434f;
+  --white: #eeeeee;
+  --gradientMid: #d6b945;
+  --gradientMid: #637351;
+  --gradientMid: #6c7b5b;
+  --fontWeightLight: 300;
+  --fontWeightRegular: 400;
+  --fontWeightMedium: 500;
+  --fontWeightSemiBold: 600;
+  --fontWeightBold: 700;
+  --gradient: linear-gradient(
+    90deg,
+    var(--background) 0%,
+    var(--gradientMid) 30%,
+    var(--gradientMid) 70%,
+    var(--background) 100%
+  );
+  --gradientSimple: linear-gradient(
+    -90deg,
+    var(--gradientMid) 0%,
+    var(--colorH2) 100%
+  );
+  --fontSizeH1: clamp(2.4rem, calc(3.125vw + 14px), 5.4rem);
+  --fontSizeH2: clamp(2rem, calc(2.5vw + 12px), 4.4rem);
+  --fontSizeH3: clamp(1.8rem, calc(1.45vw + 13.333px), 3.2rem);
+  --fontSizeH4: clamp(1.6rem, calc(1.25vw + 12px), 2.8rem);
+  --fontSizeP: clamp(1.2rem, calc(0.625vw + 10px), 1.8rem);
+  --fontSizeSmall: clamp(1rem, calc(0.625vw + 8px), 1.6rem);
+
+  --background: light-dark(var(--white), var(--grey01));
+  --reversedBackground: light-dark(var(--grey01), var(--white));
+
+  --colorH1: light-dark(var(--blue01), var(--grey05));
+  --colorH2: light-dark(var(--blue01), var(--grey05));
+  --colorH3: light-dark(var(--grey03), var(--grey04));
+  --colorH4: light-dark(var(--blue01), var(--grey05));
+  --colorP: light-dark(var(--grey03), var(--grey05));
+
+  --colorMenuInactive: light-dark(var(--grey04), var(--grey03));
+  --colorPrimaryMenu: light-dark(var(--grey03), var(--grey04));
+  --colorHoverMenu: light-dark(var(--blue01), var(--white));
+  --colorFooter: light-dark(var(--blue01), var(--grey04));
+  --colorBorder: light-dark(var(--blue01), var(--grey03));
+  --colorLinkedIn: light-dark(#d4cbbc, var(--blue01));
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  html[data-theme="light"] {
+    .light {
+      display: none;
+    }
+    .dark {
+      display: block;
+    }
+  }
+  .dark {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html[data-theme="light"] {
+    .light {
+      display: none;
+    }
+    .dark {
+      display: block;
+    }
+  }
+  .light {
+    display: none;
+  }
+}
