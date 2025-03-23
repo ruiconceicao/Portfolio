@@ -1,0 +1,167 @@
+/*|-----------------------|
+  |                       |
+  |      _ANIMATIONS      |
+  |    ANIMATIONS FILE    |
+  |                       |
+  |-----------------------|*/
+/* 
+@keyframes dropDown {
+  0% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes dropUp {
+  0% {
+    display: block;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  99% {
+  }
+  100% {
+    transform: translateY(-300%);
+    display: none;
+    visibility: visible;
+  }
+}
+
+app-header div#menuDrop[data-visible="true"] {
+  display: block;
+  visibility: visible;
+  animation: dropDown 0.5s ease forwards;
+}
+
+app-header div#menuDrop[data-visible="false"] {
+  animation: dropUp 0.3s ease forwards;
+}
+ */
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.01);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.4);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .stackCard svg {
+    transform: rotate(45deg) translate(-40%, 40%);
+    filter: blur(4px);
+
+    transition: filter 0.3s, transform 0.15s ease-in-out;
+  }
+
+  #sectionStack .stackCard:hover svg {
+    filter: blur(0px);
+    transform: translate(0);
+  }
+
+  .projectBox {
+    transition: transform 0.2s, opacity 0.2s ease-out;
+  }
+
+  .projectsContainer:has(.projectBox:not(:only-child):hover)
+    > .projectBox:not(:hover) {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+}
+
+nav ul li a,
+nav ul li a p,
+.underline-animation {
+  position: relative;
+}
+nav ul li a p::before,
+nav ul li a:not(:has(svg))::before,
+.underline-animation::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background-color: var(--gradientMid);
+  transition: width 0.25s ease-in-out;
+  border-radius: 20px;
+}
+
+nav ul li a.active::before,
+nav ul li a:hover::before,
+nav ul li a p:hover::before,
+nav ul li a:focus::before,
+nav ul li a p:focus::before,
+.underline-animation:hover::before,
+.underline-animation:focus::before {
+  width: 100%;
+}
+.inactive {
+  color: var(--colorMenuInactive) !important;
+  cursor: help;
+}
+
+.techStackSVG .stackSVG,
+.projectLinks .stackSVG {
+  fill: var(--reversedBackground);
+}
+
+.socials a:hover p,
+.socials a:focus p {
+  color: var(--colorHoverMenu);
+  text-shadow: 0px 0px 1px var(--colorHoverMenu);
+}
+
+.primaryHeader button.toggle:hover svg {
+  fill: var(--colorH2);
+}
+
+nav ul li a.active:not(:hover) {
+  color: var(--gradientMid) !important;
+}
+
+.svgFitBgFill {
+  fill: var(--background) !important;
+}
+.svgFitBgStroke {
+  stroke: var(--background) !important;
+}
+.svgBgFill {
+  fill: var(--reversedBackground) !important;
+}
+.svgBgStroke {
+  stroke: var(--reversedBackground) !important;
+}
+
+.icon svg > * {
+  transition: stroke 0.1s ease-in;
+}
+.LinkedIn-icon:hover svg > *,
+.LinkedIn-icon:focus svg > * {
+  stroke: rgba(60, 130, 245, 0.5) !important;
+}
+.GitHub-icon:hover svg > *,
+.GitHub-icon:focus svg > * {
+  stroke: rgba(111, 115, 195, 1) !important;
+}

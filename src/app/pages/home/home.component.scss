@@ -1,0 +1,81 @@
+/*|-----------------------|
+  |                       |
+  |         _BASE         |
+  |   INDEX.HTML STYLES   |
+  |                       |
+  |-----------------------|*/
+
+main > section {
+  margin-bottom: 25vh;
+  margin-bottom: 25svh;
+}
+
+section > header {
+  text-align: center;
+}
+
+/*  |--------------------|
+    |   BANNER SECTION   |
+    |--------------------|*/
+#sectionBanner {
+  max-width: 1200px;
+  height: 85vh;
+  height: 85svh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  white-space: nowrap;
+}
+
+#sectionBanner .columnLeft h1 > span {
+  background: var(--gradientSimple);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 2;
+}
+
+#sectionBanner .columnLeft p {
+  margin: 0;
+}
+
+#sectionBanner .columnRight {
+  position: relative;
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(var(--fontSizeH1) * 4.5);
+  max-width: 305px;
+  height: calc(var(--fontSizeH1) * 4.5);
+  max-height: 305px;
+  box-shadow: var(--reversedBackground) 0px 0px 25px -10px;
+}
+
+#sectionBanner .columnRight::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--gradientSimple);
+  background-clip: border-box;
+  -webkit-text-fill-color: transparent;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: -1;
+  transform: rotate(-90deg);
+  display: none;
+}
+
+#sectionBanner .columnRight img#avatar {
+  background-color: var(--background);
+  width: calc((var(--fontSizeH1) * 4.5) - 5px);
+  max-width: 300px;
+  border-radius: 100%;
+  z-index: 0;
+}
+
+/*  |---------------------------|
+    |   FIM DO BANNER SECTION   |
+    |---------------------------|*/

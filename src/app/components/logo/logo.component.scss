@@ -1,0 +1,27 @@
+/*  |----------|
+    |   LOGO   |
+    |----------|*/
+.logo .rui {
+    transform: rotateY(180deg);
+    font-size: clamp(2.5rem, calc(1.562vw + 20px), 4rem);
+    line-height: clamp(2.5rem, calc(1.562vw + 20px), 4rem);
+    font-family: "Press Start 2P", system-ui;
+    margin-bottom: 0px;
+    font-weight: var(--fontWeightBold);
+
+}
+
+.logo .dev {
+    font-size: clamp(1.2rem, calc(0.625vw + 10px), 1.8rem);
+    line-height: clamp(1.2rem, calc(0.625vw + 10px), 1.8rem);
+    font-weight: var(--fontWeightBold);
+    text-align: center;
+    margin-top: 0;
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*  |-----------------|
+    |   FIM DO LOGO   |
+    |-----------------|*/

@@ -1,0 +1,136 @@
+<header class="primaryHeader">
+  <div class="columnLeft" role="banner">
+    <app-logo></app-logo>
+    <button
+      (click)="themeService.toggleTheme()"
+      aria-label="Mudar modo de luz"
+      id="theme-switch"
+      class="toggle"
+      role="button"
+    >
+      <svg
+        class="light"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 25 25"
+        fill="none"
+        stroke-width="2.5"
+        stroke-linecap="round"
+      >
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2" />
+        <path d="M12 20v2" />
+        <path d="m4.93 4.93 1.41 1.41" />
+        <path d="m17.66 17.66 1.41 1.41" />
+        <path d="M2 12h2" />
+        <path d="M20 12h2" />
+        <path d="m6.34 17.66-1.41 1.41" />
+        <path d="m19.07 4.93-1.41 1.41" />
+      </svg>
+      <svg
+        class="dark"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+      </svg>
+    </button>
+  </div>
+  <div class="columnRight">
+    <nav class="menu Large" role="navigation">
+      <ul>
+        @for (link of linksService.linksMenu(); track link.path) {
+        <li>
+          @if (linksService.getPaths(this.router.config).includes(link.path)) {
+          @if(!link.options) {
+          <a [routerLink]="link.path" routerLinkActive="active">
+            {{ link.name }}
+          </a>
+          } @else {
+          <a
+            [routerLink]="link.path"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            {{ link.name }}
+          </a>
+          }} @else {
+          <a class="inactive" (click)="popupOnToggle()">
+            {{ link.name }}
+          </a>
+          }
+        </li>
+        } @for (link of linksService.linksSocials(); track link.name) {
+        <li class="iconLi">
+          <a
+            [href]="link.path"
+            [attr.aria-label]="'Check out my ' + link.name + ' page'"
+            target="_blank"
+            [class]="link.name + '-icon icon'"
+            [innerHTML]="linksService.getSafeSvg(link.icon)"
+          >
+          </a>
+        </li>
+        }
+      </ul>
+    </nav>
+  </div>
+  <div class="mobile-menu-button">
+    <button
+      aria-label="Abrir e Fechar Menu"
+      id="toggleMenu"
+      class="toggle"
+      (click)="toggleMenu()"
+      role="button"
+      [innerHTML]="
+        menuState
+          ? linksService.getSafeSvg(menuVisible)
+          : linksService.getSafeSvg(menuHidden)
+      "
+    ></button>
+  </div>
+</header>
+<div id="menuDrop" [@menuAnimation]="menuState ? 'visible' : 'hidden'">
+  <nav class="menu Small" role="navigation">
+    <ul>
+      @for (link of linksService.linksMenu(); track link.path) {
+      <li>
+        @if (linksService.getPaths(this.router.config).includes(link.path)) {
+        @if(!link.options) {
+        <a [routerLink]="link.path" routerLinkActive="active">
+          {{ link.name }}
+        </a>
+        } @else {
+        <a
+          [routerLink]="link.path"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          {{ link.name }}
+        </a>
+        }} @else {
+        <a class="inactive" (click)="popupOnToggle()">
+          {{ link.name }}
+        </a>
+        }
+      </li>
+      } @for (link of linksService.linksSocials(); track link.name) {
+      <li class="iconLi">
+        <a
+          [href]="link.path"
+          [attr.aria-label]="'Check out my ' + link.name + ' page'"
+          target="_blank"
+          [class]="link.name + '-icon icon'"
+          [innerHTML]="linksService.getSafeSvg(link.icon)"
+        >
+        </a>
+      </li>
+      }
+    </ul>
+  </nav>
+  <hr />
+</div>
+<app-developing-warning></app-developing-warning>

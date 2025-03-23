@@ -1,0 +1,47 @@
+/*|-------------------------|
+  |                         |
+  |          _BASE          |
+  |   BASE COMMUN STYLES    |
+  |                         |
+  |-------------------------|*/
+* {
+  box-sizing: border-box;
+  transition-duration: 0.25s;
+  transition-property: background-color, color;
+}
+
+html {
+  scrollbar-color: var(--colorH2) var(--background);
+  background-color: var(--background);
+  font-size: 62.5%;
+  font-family: "Poppins", "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  color: var(--colorP);
+}
+
+body {
+  width: 100%;
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+}
+
+app-root{
+  width: 100%;
+}
+
+main {
+  margin: 0;
+}
+
+main > section {
+  padding: 0 5%;
+  margin: 7.5vh 0;
+  margin: 7.5svh 0;
+}
+
+section > header > * {
+  margin: 1% 0;
+}
+
+/*****************************/
+/*****************************/

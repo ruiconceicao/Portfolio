@@ -1,0 +1,91 @@
+/*|---------------------|
+  |                     |
+  |     _TYPOGRAPHY     |
+  |   TYPOGRAPHY FILE   |
+  |                     |
+  |---------------------|*/
+
+h1,
+h2,
+h3,
+h4 {
+  cursor: default;
+}
+
+h1 {
+  color: var(--colorH1);
+  font-weight: var(--fontWeightBold);
+  line-height: calc(var(--fontSizeH1) + 0.5rem);
+  font-size: var(--fontSizeH1);
+}
+
+h2 {
+  font-weight: var(--fontWeightBold);
+  color: var(--colorH2);
+  line-height: calc(var(--fontSizeH2) + 0.5rem);
+  font-size: var(--fontSizeH2);
+}
+
+h3 {
+  color: var(--colorH3);
+  font-weight: var(--fontWeightRegular);
+  line-height: calc(var(--fontSizeH3) + 0.5rem);
+  font-size: var(--fontSizeH3);
+}
+
+h4 {
+  color: var(--colorH4);
+  font-weight: var(--fontWeightMedium);
+  line-height: calc(var(--fontSizeH4) + 0.5rem);
+  font-size: var(--fontSizeH4);
+}
+
+p,
+small,
+strong {
+  color: var(--colorP);
+  font-weight: var(--fontWeightLight);
+  line-height: calc(var(--fontSizeP) + 0.75rem);
+  font-size: var(--fontSizeP);
+  transition-duration: 0.25s;
+  transition-property: background-color, color;
+}
+
+small {
+  color: var(--colorH1);
+  line-height: calc(var(--fontSizeSmall) + 0.75rem);
+  font-size: var(--fontSizeSmall);
+  margin: 0 auto;
+}
+
+strong {
+  color: var(--colorH1);
+  font-weight: var(--fontWeightMedium);
+  margin: 0 auto;
+}
+
+hr {
+  position: fixed;
+  width: 100%;
+  max-width: var(--maxwidth);
+  background: var(--gradient);
+  border: none;
+  height: 2.5px;
+  margin: 0;
+  z-index: 9;
+}
+
+svg {
+  display: block;
+}
+
+a svg path {
+  stroke: var(--colorPrimaryMenu);
+}
+
+.index-html #sectionBanner #avatar,
+.index-html .stackSvgContainer .stackCard,
+.logo *,
+img {
+  user-select: none;
+}

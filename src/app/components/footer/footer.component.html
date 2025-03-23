@@ -1,0 +1,43 @@
+<footer>
+  <div class="topFooter">
+    <app-logo></app-logo>
+    <div class="contacts">
+      <div class="socials">
+        <ul>
+          <li class="mail">
+            <a href="mailto:ruiconceicao.dev@gmail.com"
+              ><p>{{ "ruiconceicao.dev@gmail.com" }}</p></a
+            >
+          </li>
+          @for (link of linksService.linksSocials(); track link.name) {
+          <li class="iconLi">
+            <a
+              [href]="link.path"
+              [attr.aria-label]="'Check out my ' + link.name + ' page'"
+              target="_blank"
+              [class]="link.name + '-icon icon'"
+              [innerHTML]="linksService.getSafeSvg(link.icon)"
+            >
+            </a>
+          </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="bottomFooter">
+    <nav>
+      <ul>
+        @for (link of linksService.linksMenu(); track link.path) {
+        <li>
+          <a [routerLink]="link.path">
+            <p>
+              {{ link.name }}
+            </p>
+          </a>
+        </li>
+        }
+      </ul>
+    </nav>
+  </div>
+</footer>

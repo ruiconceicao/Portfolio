@@ -1,0 +1,21 @@
+#popupDevWarn {
+  display: none;
+  z-index: 10;
+  background: var(--background);
+  padding: 3vw;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 0px 100vw;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  white-space: nowrap;
+  position: fixed;
+}
+#popupDevWarn>*:first-child{
+  margin-top: 0;
+}
+#popupDevWarn>*:last-child{
+  margin-bottom: 0;
+}
