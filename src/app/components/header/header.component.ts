@@ -1,5 +1,4 @@
 import {
-  asNativeElements,
   Component,
   ElementRef,
   HostListener,

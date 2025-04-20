@@ -83,12 +83,12 @@ html[data-theme="light"] {
 }
 
 @media (prefers-color-scheme: light) {
-  html[data-theme="light"] {
+  html[data-theme="dark"] {
     .light {
-      display: none;
+      display: block;
     }
     .dark {
-      display: block;
+      display: none;
     }
   }
   .light {

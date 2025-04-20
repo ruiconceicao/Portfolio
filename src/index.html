@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt">
   <head>
+    <script>
+      if (sessionStorage.getItem("theme")) {
+        document.documentElement.setAttribute(
+          "data-theme",
+          sessionStorage.getItem("theme")
+        );
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" />
@@ -19,16 +27,11 @@
       type="image/png"
       href="https://res.cloudinary.com/ruiconceicaoportfolio/image/upload/favicon.png"
     />
-    <title>Rui Conceição</title>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <script>
-      if ((theme = sessionStorage.getItem("theme"))) {
-        document.documentElement.setAttribute("data-theme", theme);
-      }
-    </script>
+    <title>Rui Conceição</title>
   </head>
   <body>
     <app-root></app-root>
