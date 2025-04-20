@@ -11,12 +11,18 @@
 }
 
 html {
-  scrollbar-color: var(--colorH2) var(--background);
-  background-color: var(--background);
   font-size: 62.5%;
   font-family: "Poppins", "Roboto", sans-serif;
   font-optical-sizing: auto;
+}
+
+body {
+  scrollbar-color: var(--colorH2) var(--background);
+  background-color: var(--background);
   color: var(--colorP);
+  font-size: 62.5%;
+  font-family: "Poppins", "Roboto", sans-serif;
+  font-optical-sizing: auto;
 }
 
 body {
