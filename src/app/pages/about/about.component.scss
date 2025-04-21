@@ -4,27 +4,28 @@
   |   ABOUT.HTML STYLES   |
   |                       |
   |-----------------------|*/
-section>.content {
-    width: 60%;
+.content {
+  width: 70%;
 }
 
 /*  |-------------------|
     |   ABOUT SECTION   |
     |-------------------|*/
+
 .about {
-    display: flex;
-    justify-content: space-between;
-    gap: 2.5vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5vw;
 }
 
-.about>.content>header * {
-    margin-top: 0;
+.about > .content > header * {
+  margin-top: 0;
 }
 
 .about article p {
-    margin: 0;
+  margin: 0;
 }
 
 /*  |--------------------------|
-    |   FIM DA ABOUT SECTION   |
+    |   END OF ABOUT SECTION   |
     |--------------------------|*/
