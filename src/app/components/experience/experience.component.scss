@@ -1,0 +1,56 @@
+/*  |------------------------|
+    |   EXPERIENCE SECTION   |
+    |------------------------|*/
+
+small {
+  font-size: clamp(1rem, calc(0.52vw + 8.33px), 1.5rem);
+}
+.top-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2.5vw;
+}
+.top-div p {
+  font-weight: var(--fontWeightRegular);
+}
+.green-label {
+  background-color: var(--green02);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  margin-left: auto;
+}
+.green-label small {
+  color: var(--green01);
+  white-space: nowrap;
+  font-weight: var(--fontWeightSemiBold);
+}
+
+.bottom-div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 0.5vw;
+  padding: 0 1.5rem;
+}
+.bottom-div > div {
+  display: flex;
+  column-gap: 0.5vw;
+}
+.bottom-div div small {
+  margin: 0;
+  white-space: nowrap;
+  font-weight: var(--fontWeightLight);
+  color: var(--colorP);
+}
+.bottom-div svg {
+  width: clamp(1rem, calc(0.52vw + 8.33px), 1.5rem);
+  stroke: var(--colorP);
+}
+hr {
+  margin: 1svh 0;
+}
+
+/*  |-------------------------------|
+    |   END OF EXPERIENCE SECTION   |
+    |-------------------------------|*/
