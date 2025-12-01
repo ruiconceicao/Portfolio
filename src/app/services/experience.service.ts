@@ -13,6 +13,13 @@ export class ExperienceService {
       workPlace: 'On-site',
       timeSpan: 'Apr 2024 - Jul 2024',
     },
+    {
+      position: 'Junior IT Systems Engineer',
+      contractType: 'Trainee',
+      company: 'Banco Montepio',
+      workPlace: 'Hybrid',
+      timeSpan: 'May 2025 - Now',
+    },
   ]);
   constructor() {}
 }
